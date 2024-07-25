@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+
+    <style>
+        ::-webkit-scrollbar{
+            display: none;
+        }
+
+
+/* DEMO-SPECIFIC STYLES */
+
+li.active {
+      background-color: #28a745;
+    }
+
+.typewriter {
+  color: white;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-bottom: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+
+  animation: 
+    typing 4s steps(50, end),
+    blink-caret .5s step-end infinite;
+}
+.first {
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: -3s;
+}
+.fContant{
+    opacity: 0;
+  animation: fContant 2s ease-out forwards;
+  animation-delay: 1s;
+}
+.FScont{
+    animation: FScont 4s ease-out forwards;
+    animation-delay: -3s;
+}
+.box{
+    animation: box 4s ease-out forwards;
+    animation-delay: -5s;
+}
+.boxCon1{
+    opacity: 0;
+    animation: boxCon 4s ease-in-out forwards;
+    animation-delay: 0s;
+}
+.boxCon2{
+    opacity: 0;
+    animation: boxCon 4s ease-in-out forwards;
+    animation-delay: .3s;
+}
+.boxCon3{
+    opacity: 0;
+    animation: boxCon 4s ease-in-out forwards;
+    animation-delay: .6s;
+}
+.boxCon4{
+    opacity: 0;
+    animation: boxCon 4s ease-in-out forwards;
+    animation-delay: .9s;
+}
+
+.Limg1{
+    opacity: 0;
+    animation: Limg 4s ease-in-out forwards;
+    animation-delay: .2s;
+}
+.Limg2{
+    opacity: 0;
+    animation: Limg 4s ease-in-out forwards;
+    animation-delay: .5s;
+}
+.Limg3{
+    opacity: 0;
+    animation: Limg 4s ease-in-out forwards;
+    animation-delay: .8s;
+}
+.Limg4{
+    opacity: 0;
+    animation: Limg 4s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+
+.rotateClockwise {
+    animation: rotateClockwise 2s linear infinite;
+}
+
+.animate-scaleUp {
+    animation: scaleUp 0.4s ease-in-out forwards;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: transparent }
+}
+
+@keyframes example {
+  
+  75%  { left:0px; top:200px;}
+  100% {left:0px; top:0px;}
+}
+
+@keyframes fContant {
+  0%  {transform: translateY(35px);opacity: 0;}
+  100% {transform: translateY(0px);opacity: 1;}
+}
+
+@keyframes FScont {
+    0%  {transform: translateY(-300px);}
+    100% {transform: translateY(0px);}
+}
+
+@keyframes box {
+    0%  {transform: translateY(-300px);}
+    100% {transform: translateY(0px);}
+}
+
+@keyframes boxCon {
+    0%  {opacity: .5;}
+    100% {opacity: 1;}
+}
+
+@keyframes Limg {
+    0%  {opacity: .5;}
+    100% {opacity: 1;}
+}
+
+@keyframes rotateClockwise {
+    to{transform: rotate(360deg)}
+}
+
+@keyframes scaleUp {
+  from {
+    scale: 0.5;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+    </style>
+</head>
+
+<body class="bg-black ">
+
+    <div class="md:flex md:py-10 py-16 w-[90vw] h-[100vh] items-end overflow-hidden m-auto ">
+        <div class="bg-[#201c1c] max-h-[100%] overflow-y-scroll">
+
+            <!-- Main image with contant -->
+            <div class="relative flex justify-center pt-20">
+                <div class="first relative flex justify-center items-center">
+                <div class=" rounded-[50%] md:size-[400px] size-[290px] rotateClockwise absolute bg-gradient-to-b from-[#cafe00] to-[#22c55e] animate-scaleUp"></div>
+                <img src="home img.webp" alt="" class="relative">
+            </div>
+                <div class="fContant font-bold absolute -bottom-3 z-[12]">
+                    <h1 class="m-0 drop-shadow-md md: lg:text-8xl text-7xl flex text-wrap justify-center sm:text-start text-center bg-gradient-to-b from-[#cafe00] to-[#22c55e] text-transparent bg-clip-text">Amelia Miller</h1>
+                </div>
+            </div>
+
+            <!-- Box Under main image -->
+            <div class="box bg-gradient-to-r from-[#cafe00] to-[#22c55e] pb-[1px] max-w-5xl mx-auto">
+                <div class="justify-between bg-gradient-to-t from-[#18181b] to-[#27272a] md:transition-all md:duration-1000 relative z-10 p-10 text-center md:p-6 ld:grid-cols-4 prose prose-invert grid grid-cols-2 lg:grid-cols-4 bg-gradient-omega-900 shadow-lg divide-omega-700/30 lg:divide-x">
+                    <!-- 1st portion -->
+                    <div class="boxCon1 md:transition-all md:duration-1000 flex-1 p-2">
+                        <h3 class="m-0 text-accent text-[#3b82f6] font-bold lg:text-4xl text-3xl">6+</h3>
+                        <p class="mt-2 mb-0 text-omega-300 lg:text-xl text-base text-wrap font-medium text-[#d4d4d8]">Years
+                            of experience</p>
+                    </div>
+                    <!-- 2nd Portion -->
+                    <div class="boxCon2 md:transition-all md:duration-1000 flex-1 p-2" style="transition-delay: 250ms;">
+                        <h3 class="m-0 text-accent text-[#3b82f6] font-bold lg:text-4xl text-3xl">60+</h3>
+                        <p class="mt-2 mb-0 text-omega-300 text-base text-wrap font-medium text-[#d4d4d8]">Projects Completed
+                        </p>
+                    </div>
+                    <!-- 3rd Portion -->
+                    <div class="boxCon3 md:transition-all md:duration-1000 flex-1 p-2" style="transition-delay: 500ms;">
+                        <h3 class="m-0 text-accent text-[#3b82f6] font-bold lg:text-4xl text-3xl">12</h3>
+                        <p class="mt-2 mb-0 text-omega-300 text-base text-wrap font-medium text-[#d4d4d8]">OpenSource
+                            Libraries</p>
+                    </div>
+                    <!-- 4th Portion -->
+                    <div class="boxCon4 md:transition-all md:duration-1000 flex-1 p-2" style="transition-delay: 750ms;">
+                        <h3 class="m-0 text-accent text-[#3b82f6] font-bold lg:text-4xl text-3xl">50+</h3>
+                        <p class="mt-2 mb-0 text-omega-300 text-base text-wrap font-medium text-[#d4d4d8]">Happy Customers
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2nd part under box -->
+            <div class="text-center text-white w-4/5 m-auto">
+                <div class="flex justify-center items-center pt-10">
+                    <h1 class="lg:text-4xl sm:text-3xl text-xl font-bold typewriter">
+                            <img src="svg/Arrow.svg" alt="" class="lg:w-7 sm:w-6 w-4 inline-block">
+                            Full-Stack Developer_
+                    </h1>
+                </div>
+
+                <div class="FScont">
+                <p class="md:text-lg text-base pt-6 text-[#d4d4d8]">Sometimes five Imprimaturs are seen together
+                    dialogue-wise in the piazza of one title-page, complimenting and ducking each to other with their
+                    shaven reverences, whether the author, who stands by in perplexity at the foot of his epistle, shall
+                    to the press or to the sponge.</p>
+                </div>
+
+                   <!-- Button -->
+            <div class="relative w-52 m-auto md:mb-0 mb-12">
+                <div class="mt-14 border-2 border-transparent bg-white text-black w-52 py-4 px-5 m-auto transition-transform hover:translate-x-2 hover:translate-y-2 cursor-pointer relative z-[2]">
+                    Download Resume</div>
+                <div class="border-2 border-transparent bg-gradient-to-r from-[#cafe00] to-[#22c55e] w-52 ht-4 m-auto absolute left-[8px] bottom-[-8px] h-2/3 z-[1]"> </div>
+            </div>
+
+            </div>
+
+            <!-- Images under Button -->
+            <div class="md:flex hidden justify-around m-auto mb-16 mt-14 ">
+                <h1 class="text-white text-3xl font-bold">Trusted By</h1>
+                <img src="svg/1st.svg" alt="" class="w-36 Limg1">
+                <img src="svg/2nd.svg" alt="" class="w-36 Limg2">
+                <img src="svg/2nd.svg" alt="" class="w-36 Limg3">
+                <img src="svg/4th.svg" alt="" class="w-36 Limg4">
+            </div>
+
+        </div>
+
+        <!-- Navbar -->
+        <div class="nav right-[5vw] bottom-0 md:w-[150px] ">
+            <ul class= "justify-center list-none text-white flex md:flex-col">
+
+                <li id="colorButton" class="bg-gradient-to-t from-[#18181b] to-[#27272a] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"><div class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden   invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#3b82f6]">Home</div><span class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img src="svg/home-logo.svg" alt="" class="w-6"></li>
+
+                <li class="bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group "><div class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#3b82f6]">About</div><span class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img src="svg/Person.svg" alt="" class="w-6"></li>
+
+                <li class="bg-gradient-to-l from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group "><div class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#3b82f6]">Services</div><span class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img src="svg/bag.svg" alt="" class="w-6"></li>
+
+                <li class="bg-gradient-to-b from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group "><div class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#3b82f6]">Articles</div><span class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img src="svg/pencile.svg" alt="" class="w-6"></li>
+
+                <li class="bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"><div class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#3b82f6]">Projects</div><span class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img src="svg/cup2.svg" alt="" class="w-6"></li>
+
+                <li class="bg-gradient-to-t from-[#18181b] to-[#27272a] md:hidden h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-4 transition-all duration-300 text-white group md:w-auto w-1/4"><img src="svg/Dot.svg" alt="" class="w-10"></li>
+
+
+            </ul>
+        </div>
+    </div>
+    <script>
+
+  // JavaScript code for changing button color on click
+  const colorButton = document.getElementById('colorButton');
+
+  colorButton.addEventListener('click', function() {
+    // Toggle the 'active' class on click
+    colorButton.classList.toggle('bg-gradient-to-t');
+    colorButton.classList.toggle('bg-green-900');
+    // colorButton.classList.toggle('hover:bg-[#192380]');
+  });
+
+    </script>
+</body>
+
+</html>
