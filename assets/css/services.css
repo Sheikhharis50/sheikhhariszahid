@@ -1,0 +1,30 @@
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+.scroll {
+-ms-overflow-style: none;  
+scrollbar-width: none;
+}
+
+.Fsection{
+animation: Fsection 3s ease-in-out forwards;
+animation-delay: -2s;
+}
+
+.animate-scaleUp {
+animation: scaleUp 1s ease-out forwards;
+}
+
+@keyframes Fsection {
+0%  {transform: translateX(-200px);opacity: 0;}
+100% {transform: translateX(0px);opacity: 1;}
+}
+
+@keyframes scaleUp {
+from {
+scale: 0.8;
+}
+to {
+scale: 1;
+}
+}
