@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+
+        .scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+        }
+
+        .Fsection{
+    animation: Fsection 3s ease-in-out forwards;
+    animation-delay: -2s;
+}
+
+.animate-scaleUp {
+    animation: scaleUp 1s ease-out forwards;
+}
+
+@keyframes Fsection {
+    0%  {transform: translateX(-200px);opacity: 0;}
+    100% {transform: translateX(0px);opacity: 1;}
+}
+
+@keyframes scaleUp {
+  from {
+    scale: 0.8;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+    </style>
+</head>
+<body class="bg-black">
+<div class="md:flex md:py-10 py-0 lg:w-[90vw] w-[100vw] h-[100vh] items-end overflow-hidden m-auto">
+    
+    
+    <div class="scroll md:flex bg-[#201c1c] max-h-[100%] overflow-y-scroll pt-7">
+        
+
+
+
+        <div class="Fsection p-10">
+
+        <div class=" md:mt-0 mt-[-67px] ">
+            <div class="md:hidden block bg-gradient-to-r from-[#cafe00] to-[#22c55e] pb-[1px]">
+                <div class="md:hidden bg-gradient-to-t from-[#18181b] to-[#27272a] md:transition-all md:duration-1000 relative z-10 p-5 "><h1 class=" text-white text-4xl font-bold mb-6" >Services</h1>
+                    <h1 class="text-4xl font-semibold mb-10 bg-gradient-to-t from-[#cafe00] to-[#22c55e] text-transparent bg-clip-text">My Expertise</h1>
+                </div>
+            </div>
+        </div>
+
+
+            <h1 class=" text-white text-4xl font-bold mb-6 md:block hidden">Services</h1>
+            <h1 class="text-4xl font-semibold mb-10 bg-gradient-to-t from-[#cafe00] to-[#22c55e] text-transparent bg-clip-text md:block hidden">My Expertise</h1>
+            <h2 class=" text-white text-2xl font-bold mb-6 md:mt-0 mt-6">Solving problems</h2>
+            <p class="text-[#e5e7eb] mb-6 text-xl">I droducts that are more than pretty. I make them shippable and usable. Et tempor non mollit dolor et do aute voluptate ea ullamco.</p>
+            <h2 class=" text-white text-2xl font-bold mb-6">What you can expect</h2>
+            <li class="text-[#e5e7eb] ml-2 marker:text-gray-400">Design Strategy</li>
+            <li class="text-[#e5e7eb] ml-2 marker:text-gray-400">Web and Mobile App Design</li>
+            <li class="text-[#e5e7eb] mb-6 ml-2 marker:text-gray-400">Front-end Development</li>
+            <h2 class=" text-white text-2xl font-bold mb-6">Applications I'm fluent in</h2>
+            <li class="text-[#e5e7eb] ml-2 marker:text-gray-400">Design Strategy</li>
+            <li class="text-[#e5e7eb] ml-2 marker:text-gray-400">Web and Mobile App Design</li>
+            <li class="text-[#e5e7eb] ml-2 marker:text-gray-400">Front-end Development</li>
+
+            <!-- Button -->
+            <div class="relative w-52 m-auto md:mb-0 mb-8 md:mt-0 mt-8 ">
+                <div class="mt-7 border-2 border-transparent bg-white text-black w-52 py-4 px-5 m-auto transition-transform hover:translate-x-2 hover:translate-y-2 cursor-pointer relative z-[2]">
+                    Get Free Price Quote</div>
+                <div class="border-2 border-transparent bg-gradient-to-r from-[#cafe00] to-[#22c55e] w-52 m-auto absolute left-[8px] bottom-[-8px] h-12 z-[1]"> </div>
+            </div>
+
+
+        </div>
+
+              
+
+
+
+            <div class="md:flex md:p-10 p-0">
+
+            <!-- 1st box 2nd section-->
+            <div class="flex flex-col md:gap-10 gap-4 md:w-auto w-screen">
+                <div class="animate-scaleUp border-2 border-transparent md:w-auto w-[95vw]">
+                <div class="bg-gradient-to-r from-[#cafe00] to-[#22c55e] p-8">
+                    <img src="svg/mobile.svg" alt="" class="w-20 ml-[-11px]">
+                    <h1 class="text-2xl font-bold mt-4">Web and Mobile App Design</h1>
+                </div>
+                <div class="p-8 bg-white">
+                    <p class="text-lg">Defining the problem, identifying the scope and finally, organizing. Et tempor non mollit dolor et do aute voluptate ea ullamco culpa pariatur.</p>
+                    <li class="mt-4 font-semibold ml-2 marker:text-gray-300">Design Strategy</li>
+                    <li class="font-semibold ml-2 marker:text-gray-300"> Web and Mobile App Design</li>
+                    <li class="font-semibold ml-2 marker:text-gray-300">Front-end Development</li> 
+                </div>
+                </div>
+
+                <!-- 2nd box -->
+                <div class="animate-scaleUp border-2 border-transparent">
+                <div class="bg-gradient-to-r from-[#cafe00] to-[#22c55e] p-8">
+                    <img src="svg/block.svg" alt="" class="w-20 ml-[-11px]">
+                    <h1 class="text-2xl font-bold mt-4">Web and Mobile App Design</h1>
+                </div>
+                <div class="p-8 bg-white">
+                    <p class="text-lg">Defining the problem, identifying the scope and finally, organizing. Et tempor non mollit dolor et do aute voluptate ea ullamco culpa pariatur.</p>
+                    <li class="mt-4 font-semibold ml-2 marker:text-gray-300">Design Strategy</li>
+                    <li class="font-semibold ml-2 marker:text-gray-300">Web and Mobile App Design</li>
+                    <li class="font-semibold ml-2 marker:text-gray-300">Front-end Development</li> 
+                </div>
+                </div>
+            </div>
+
+            <!-- 3rd box 3rd section -->
+            <div class="flex flex-col md:gap-10 gap-4 md:ml-10 ml-0 md:mt-0 mt-4">
+                <div class="animate-scaleUp border-2 border-transparent ">
+                <div class="bg-gradient-to-r from-[#cafe00] to-[#22c55e] p-8">
+                    <img src="svg/peramid.svg" alt="" class="w-11 ml-[8px]">
+                    <h1 class="text-2xl font-bold mt-4">Web and Mobile App Design</h1>
+                </div>
+                <div class="p-8 bg-white">
+                    <p class="text-lg">Defining the problem, identifying the scope and finally, organizing. Et tempor non mollit dolor et do aute voluptate ea ullamco culpa pariatur.</p>
+                    <li class="mt-4 font-semibold ml-2 marker:text-gray-300">Design Strategy</li>
+                    <li class="font-semibold ml-2 marker:text-gray-300">Web and Mobile App Design</li>
+                    <li class="font-semibold ml-2 marker:text-gray-300">Front-end Development</li> 
+                </div>
+                </div>
+
+                <!-- 4th box -->
+                <div class="animate-scaleUp border-2 border-transparent md:pb-10 pb-0">
+                <div class="bg-gradient-to-r from-[#cafe00] to-[#22c55e] p-8">
+                    <img src="svg/certificate.svg" alt="" class="w-20 ml-[-11px]">
+                    <h1 class="text-2xl font-bold mt-4">Web and Mobile App Design</h1>
+                </div>
+                <div class="p-8 bg-white">
+                    <p class="text-lg">Defining the problem, identifying the scope and finally, organizing. Et tempor non mollit dolor et do aute voluptate ea ullamco culpa pariatur.</p>
+                    <li class="mt-4 font-semibold ml-2 marker:text-gray-300">Design Strategy</li>
+                    <li class="font-semibold ml-2 marker:text-gray-300">Web and Mobile App Design</li>
+                    <li class="font-semibold ml-2 marker:text-gray-300">Front-end Development</li>
+                </div> 
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+<!-- Navbar -->
+<div class="nav right-[5vw] bottom-0 md:w-[150px] ">
+    <ul class= "justify-center list-none text-white flex md:flex-col">
+
+        <li id="colorButton" class="bg-gradient-to-t from-[#18181b] to-[#27272a] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"><div class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden   invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#3b82f6]">Home</div><span class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img src="svg/home-logo.svg" alt="" class="w-6"></li>
+
+        <li class="bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group "><div class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#3b82f6]">About</div><span class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img src="svg/Person.svg" alt="" class="w-6"></li>
+
+        <li class="bg-gradient-to-l from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group "><div class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#3b82f6]">Services</div><span class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img src="svg/bag.svg" alt="" class="w-6"></li>
+
+        <li class="bg-gradient-to-b from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group "><div class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#3b82f6]">Articles</div><span class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img src="svg/pencile.svg" alt="" class="w-6"></li>
+
+        <li class="bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"><div class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#3b82f6]">Projects</div><span class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img src="svg/cup2.svg" alt="" class="w-6"></li>
+
+        <li class="bg-gradient-to-t from-[#18181b] to-[#27272a] md:hidden h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-4 transition-all duration-300 text-white group md:w-auto w-1/4"><img src="svg/Dot.svg" alt="" class="w-10"></li>
+    </ul>
+</div>
+    
+</div>
+
+</body>
+</html>
