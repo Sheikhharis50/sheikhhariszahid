@@ -6,163 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>About | Sheikh Haris Zahid</title>
-    <style>
-        .typewriter {
-            color: white;
-            overflow: hidden;
-            /* Ensures the content is not revealed until the animation */
-            border-bottom: .15em solid orange;
-            /* The typwriter cursor */
-            white-space: nowrap;
-            /* Keeps the content on a single line */
-
-            animation:
-                typing 4s steps(50, end),
-                blink-caret .5s step-end infinite;
-        }
-
-        .Border {
-            border-bottom: 6px solid transparent;
-            border-image: linear-gradient(to right, #001809, #4c4ef0, #29b1f5 );
-            border-image-slice: 1;
-        }
-
-
-        .scroll::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scroll {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-
-        .FScont {
-            animation: FScont 4s ease-in-out forwards;
-            animation-delay: -3s;
-                }
-
-        .progressBar1 {
-            opacity: 0;
-            animation: progressBar 4s ease-out forwards;
-            animation-delay: .1s;
-        }
-
-        .progressBar2 {
-            opacity: 0;
-            animation: progressBar 4s ease-out forwards;
-            animation-delay: .2s;
-        }
-
-        .progressBar3 {
-            opacity: 0;
-            animation: progressBar 4s ease-out forwards;
-            animation-delay: .3s;
-        }
-
-        .progressBar4 {
-            opacity: 0;
-            animation: progressBar 4s ease-out forwards;
-            animation-delay: .4s;
-        }
-
-        .progressBar5 {
-            opacity: 0;
-            animation: progressBar 4s ease-out forwards;
-            animation-delay: .5s;
-        }
-        .progressBar6 {
-            opacity: 0;
-            animation: progressBar 4s ease-out forwards;
-            animation-delay: .6s;
-        }
-        .animate-scaleUp {
-            background-image: url("/assets/images/profile2.webp");
-            background-size: cover;
-            background-position: center;
-            animation: animate-scaleUp .6s ease-out forwards;
-        }
-
-        @keyframes animate-scaleUp {
-            from {
-            scale: 0.8;
-        }
-        to {
-            scale: 1;
-        }
-        }
-
-        @keyframes progressBar {
-            0% {
-                opacity: .7;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        @keyframes typing {
-            from {
-                width: 0
-            }
-
-            to {
-                width: 100%
-            }
-        }
-
-        /* The typewriter cursor effect */
-        @keyframes blink-caret {
-
-            from,
-            to {
-                border-color: transparent
-            }
-
-            50% {
-                border-color: transparent
-            }
-        }
-
-        @media only screen and (max-width: 448px) {
-            .xs {
-                 display: flex !important;
-                 flex-direction: column !important;
-            }
-        }        @media only screen and (max-width: 448px) {
-            .xsa {
-                margin-top: 0 !important;
-                margin-left: 0 !important;
-                 }
-        }
-
-        @keyframes FScont {
-            0% {
-                transform: translateY(400px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-
-        @media only screen and (max-width: 400) {
-            .button {
-                 width: 280px !important;
-            }
-        }
-        
-    </style>
+    <link rel="stylesheet" href="/assets/css/about.css">
 </head>
 
 <body class="bg-black">
 
     <div class="md:flex lg:pt-10 pt-0 lg:pb-10 md:pb-0 pb-16 lg:w-[90vw] [100vw] h-[100vh] items-end overflow-hidden m-auto ">
-        <div class="scroll bg-[#201c1c] max-h-[100%] overflow-y-scroll">
+        <div class="scroll   bg-gradient-to-l from-[#18181b] to-[#27272a] max-h-[100%] overflow-y-scroll">
 
-            <div class="flex  md:flex-row flex-col">
+            <div class="flex md:flex-row flex-col">
                 <!-- Left section  -->
                 <div class="animate-scaleUp md:w-[70%] w-[100%] flex flex-col">
                     <div class="flex justify-center items-center md:mt-12 mt-0">
@@ -379,7 +231,7 @@
             <!-- Lower section left Part -->
             <div class="bg-white flex md:flex-row flex-col md:items-center items-start justify-between p-10">
 
-                <div class="md:w-[46%] w-[100%] md:h-[55vh] h-auto">
+                <div class="md:w-[46%] w-[100%] lg:h-[90vh] h-auto">
                     <div class="Border text-blabg-black font-semibold sm:text-4xl text-3xl pt-7 pb-7">
                         <h1>Employment</h1>
                     </div>
@@ -410,7 +262,7 @@
                 </div>
 
                 <!-- Lower section Right Part -->
-                <div class="md:w-[46%] w-[100%] md:h-[55vh] h-auto">
+                <div class="md:w-[46%] w-[100%] lg:h-[90vh] h-auto">
                     <div class="Border text-blabg-black font-semibold sm:text-4xl text-3xl border-b-[6px] border-black pt-7 pb-7">
                         <h1>Education</h1>
                     </div>
@@ -445,69 +297,86 @@
         </div>
 
         <!-- Navbar -->
-        <div class="nav right-[5vw] bottom-0 md:w-[150px] ">
-            <ul class="justify-center list-none text-white flex md:flex-col">
+<div class="nav right-[5vw] bottom-0 md:w-[150px] ">
+    <ul class="justify-center list-none text-white flex md:flex-col">
 
-                <li id="colorButton"
-                    class="bg-gradient-to-t from-[#18181b] to-[#27272a] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"
-                    onclick="location.href = '/pages/home.html'"> 
-                    <div
-                        class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden   invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
-                        Home</div><span
-                        class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img
-                        src="/assets/svg/nav/home.svg" alt="" class="w-6">
-                </li>
+        <!-- Home page -->
+        <li id="colorButton"
+            class="bg-gradient-to-t from-[#18181b] to-[#27272a] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"
+            onclick="location.href = '/pages/home.html'"> 
+            <div
+                class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden   invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
+                Home</div><span
+                class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img
+                src="/assets/svg/nav/home.svg" alt="" class="w-6">
+        </li>
 
-                <li
-                    class="bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"
-                    onclick="location.href = '/pages/about.html'">
-                    <div
-                        class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
-                        About</div><span
-                        class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img
-                        src="/assets/svg/nav/about.svg" alt="" class="w-6">
-                </li>
+        <!-- About page -->
+        <li
+            class="bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"
+            onclick="location.href = '/pages/about.html'">
+            <div
+                class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
+                About</div><span
+                class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img
+                src="/assets/svg/nav/about.svg" alt="" class="w-6">
+        </li>
 
-                <li class="bg-gradient-to-l from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group "
-                    onclick="location.href = '/pages/services.html'">
-                    <div
-                        class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
-                        Services
-                    </div>
-                    <span
-                        class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block ">
-                    </span>
-                    <img src="/assets/svg/nav/services.svg" alt="" class="w-6">
-                </li>
+        <!-- Services page -->
+        <li class="bg-gradient-to-l from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group "
+            onclick="location.href = '/pages/services.html'">
+            <div
+                class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
+                Services
+            </div>
+            <span
+                class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block ">
+            </span>
+            <img src="/assets/svg/nav/services.svg" alt="" class="w-6">
+        </li>
 
-                <li
-                    class="bg-gradient-to-b from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"
-                    onclick="location.href = '/pages/article.html'">
-                    <div
-                        class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
-                        Articles</div><span
-                        class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img
-                        src="/assets/svg/nav/article.svg" alt="" class="w-6">
-                </li>
+        <!-- Article page -->
+        <li
+            class="bg-gradient-to-b from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"
+            onclick="location.href = '/pages/articles.html'">
+            <div
+                class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
+                Articles</div><span
+                class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img
+                src="/assets/svg/nav/article.svg" alt="" class="w-6">
+        </li>
 
-                <li
-                    class="bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"
-                    onclick="location.href = '/pages/project.html'">
-                    <div
-                        class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
-                        Projects</div><span
-                        class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img
-                        src="/assets/svg/nav/projects.svg" alt="" class="w-6">
-                </li>
+        <!-- Projects page -->
+        <li
+            class="bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"
+            onclick="location.href = '/pages/project.html'">
+            <div
+                class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
+                Projects</div><span
+                class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img
+                src="/assets/svg/nav/projects.svg" alt="" class="w-6">
+        </li>
 
-                <li
-                    class="bg-gradient-to-t from-[#18181b] to-[#27272a] md:hidden h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-4 transition-all duration-300 text-white group md:w-auto w-1/4">
-                    <img src="/assets/svg/nav/dot.svg" alt="" class="w-10">
-                </li>
+        <!-- Contact page -->
+        <li
+        class="bg-gradient-to-t from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"
+        onclick="location.href = '/pages/contact.html'">
+        <div
+            class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
+            Contact</div><span
+            class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img
+            src="/assets/svg/nav/email.svg" alt="" class="w-6">
+        </li>
+
+        <!-- Three Dots -->
+        <li
+            class="bg-gradient-to-t from-[#18181b] to-[#27272a] md:hidden h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-4 transition-all duration-300 text-white group md:w-auto w-1/4">
+            <img src="/assets/svg/nav/dot.svg" alt="" class="w-10">
+        </li>
 
 
-            </ul>
-        </div>
+    </ul>
+</div>
         <!-- First div ending -->
     </div>
 </body>
