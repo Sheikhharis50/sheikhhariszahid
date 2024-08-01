@@ -4,90 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
-
-    <style>
-        ::-webkit-scrollbar {
-            display: none;
-        }
-
-        .animate-scaleUp:hover {
-            animation: scaleUp .3s ease-out forwards;
-
-        }
-
-        .scrollUp1 {
-            opacity: 0;
-            animation: scrollUp .8s ease-in-out forwards;
-            animation-delay: .2s;
-                }
-
-            .scrollUp2 {
-        opacity: 0;
-        animation: scrollUp .8s ease-in-out forwards;
-        animation-delay: .3s;
-            }
-
-
-            .scrollUp3 {
-        opacity: 0;
-        animation: scrollUp .8s ease-in-out forwards;
-        animation-delay: .4s;
-        }
-
-            .scrollRight {
-        opacity: 0;
-        animation: scrollRight .8s ease-in-out forwards;
-        animation-delay: .2s;
-        }
-
-
-                @keyframes scrollUp {
-            0% {
-                transform: translateY(40px);opacity: 0;
-            }
-
-            100% {
-                transform: translateY(0px);opacity: 1;
-            }
-        }
-
-        @keyframes scrollRight {
-            0% {
-                transform: translateX(-40px);opacity: 0;
-            }
-
-            100% {
-                transform: translateX(0px);opacity: 1;
-            }
-        }
-
-        @keyframes scaleUp {
-        from {
-            scale: 1;
-        }
-        to {
-            scale: 1.1;
-        }
-        }
-
-        @media only screen and (max-width: 910px) {
-            .nine {
-                 display: flex !important;
-                 flex-direction: column !important;
-            }
-        }
-
-        @media only screen and (max-width: 910px) {
-            .pading
-            {
-                 margin-left: -21px;
-                 margin-top: 20px;
-            }
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="/assets/css/project.css">
+    <title>Project | Sheikh Haris Zahid</title>
 </head>
 <body class="bg-black">
 
@@ -345,6 +263,7 @@
 <div class="nav right-[5vw] bottom-0 md:w-[150px] ">
     <ul class="justify-center list-none text-white flex md:flex-col">
 
+        <!-- Home page -->
         <li id="colorButton"
             class="bg-gradient-to-t from-[#18181b] to-[#27272a] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"
             onclick="location.href = '/pages/home.html'"> 
@@ -355,6 +274,7 @@
                 src="/assets/svg/nav/home.svg" alt="" class="w-6">
         </li>
 
+        <!-- About page -->
         <li
             class="bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"
             onclick="location.href = '/pages/about.html'">
@@ -365,6 +285,7 @@
                 src="/assets/svg/nav/about.svg" alt="" class="w-6">
         </li>
 
+        <!-- Services page -->
         <li class="bg-gradient-to-l from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group "
             onclick="location.href = '/pages/services.html'">
             <div
@@ -377,9 +298,10 @@
             <img src="/assets/svg/nav/services.svg" alt="" class="w-6">
         </li>
 
+        <!-- Article page -->
         <li
             class="bg-gradient-to-b from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"
-            onclick="location.href = '/pages/article.html'">
+            onclick="location.href = '/pages/articles.html'">
             <div
                 class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
                 Articles</div><span
@@ -387,6 +309,7 @@
                 src="/assets/svg/nav/article.svg" alt="" class="w-6">
         </li>
 
+        <!-- Projects page -->
         <li
             class="bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"
             onclick="location.href = '/pages/project.html'">
@@ -397,6 +320,18 @@
                 src="/assets/svg/nav/projects.svg" alt="" class="w-6">
         </li>
 
+        <!-- Contact page -->
+        <li
+        class="bg-gradient-to-t from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"
+        onclick="location.href = '/pages/contact.html'">
+        <div
+            class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
+            Contact</div><span
+            class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img
+            src="/assets/svg/nav/email.svg" alt="" class="w-6">
+        </li>
+
+        <!-- Three Dots -->
         <li
             class="bg-gradient-to-t from-[#18181b] to-[#27272a] md:hidden h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-4 transition-all duration-300 text-white group md:w-auto w-1/4">
             <img src="/assets/svg/nav/dot.svg" alt="" class="w-10">

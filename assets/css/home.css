@@ -1,0 +1,209 @@
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* DEMO-SPECIFIC STYLES */
+
+li.active {
+    background-color: #28a745;
+}
+
+.typewriter {
+    color: white;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-bottom: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+
+    animation:
+        typing 4s steps(50, end),
+        blink-caret .5s step-end infinite;
+}
+
+.first {
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: -3s;
+}
+
+.fContant {
+    opacity: 0;
+    animation: fContant 2s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.FScont {
+    animation: FScont 4s ease-out forwards;
+    animation-delay: -3s;
+}
+
+.box {
+    animation: box 4s ease-out forwards;
+    animation-delay: -3s;
+}
+
+.boxCon1 {
+    opacity: 0;
+    animation: boxCon 4s ease-in-out forwards;
+    animation-delay: 0s;
+}
+
+.boxCon2 {
+    opacity: 0;
+    animation: boxCon 4s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+.boxCon3 {
+    opacity: 0;
+    animation: boxCon 4s ease-in-out forwards;
+    animation-delay: .6s;
+}
+
+.boxCon4 {
+    opacity: 0;
+    animation: boxCon 4s ease-in-out forwards;
+    animation-delay: .9s;
+}
+
+.Limg1 {
+    opacity: 0;
+    animation: Limg 4s ease-in-out forwards;
+    animation-delay: .2s;
+}
+
+.Limg2 {
+    opacity: 0;
+    animation: Limg 4s ease-in-out forwards;
+    animation-delay: .5s;
+}
+
+.Limg3 {
+    opacity: 0;
+    animation: Limg 4s ease-in-out forwards;
+    animation-delay: .8s;
+}
+
+.Limg4 {
+    opacity: 0;
+    animation: Limg 4s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+
+.rotateClockwise {
+    animation: rotateClockwise 2s linear infinite;
+}
+
+.animate-scaleUp {
+    animation: scaleUp 0.4s ease-in-out forwards;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: transparent
+    }
+}
+
+@keyframes example {
+
+    75% {
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+@keyframes fContant {
+    0% {
+        transform: translateY(35px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes FScont {
+    0% {
+        transform: translateY(-300px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes box {
+    0% {
+        transform: translateY(-300px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes boxCon {
+    0% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Limg {
+    0% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotateClockwise {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        scale: 0.5;
+    }
+
+    to {
+        scale: 1;
+    }
+}
