@@ -28,3 +28,10 @@ to {
 scale: 1;
 }
 }
+
+@media only screen and (max-width: 900px) {
+    .direction {
+         display: flex !important;
+         flex-direction: column !important;
+    }
+} 
