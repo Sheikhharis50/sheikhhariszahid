@@ -70,7 +70,7 @@
             animation-delay: .6s;
         }
         .animate-scaleUp {
-            background-image: url("/assets/images/about/profile2.webp");
+            background-image: url("/assets/images/about/Profile.jpg");
             background-size: cover;
             background-position: center;
             animation: animate-scaleUp .6s ease-out forwards;
