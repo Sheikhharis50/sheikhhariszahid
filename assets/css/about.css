@@ -70,7 +70,7 @@
             animation-delay: .6s;
         }
         .animate-scaleUp {
-            background-image: url("/assets/images/about/profile2.webp");
+            background-image: url("/assets/images/about/Profile.jpg");
             background-size: cover;
             background-position: center;
             animation: animate-scaleUp .6s ease-out forwards;
@@ -123,10 +123,19 @@
                  display: flex !important;
                  flex-direction: column !important;
             }
-        }        @media only screen and (max-width: 448px) {
+        }        
+        
+        @media only screen and (max-width: 448px) {
+
             .xsa {
+                margin-left: -25px !important;
+                 }
+        }
+
+        @media only screen and (max-width: 448px) {
+            .xsa2{
+                margin-left: -23px !important;
                 margin-top: 0 !important;
-                margin-left: 0 !important;
                  }
         }
 
