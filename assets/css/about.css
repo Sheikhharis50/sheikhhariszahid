@@ -74,6 +74,7 @@
             background-size: cover;
             background-position: center;
             animation: animate-scaleUp .6s ease-out forwards;
+            height: 660px;
         }
 
         @keyframes animate-scaleUp {
@@ -154,4 +155,4 @@
                  width: 280px !important;
             }
         }
-        
+    
