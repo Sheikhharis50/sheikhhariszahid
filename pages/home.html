@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/assets/css/home.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Home | Sheikh Haris Zahid</title>
   </head>
 
   <body class="bg-black">
-    <div class="md:flex lg:pt-10 pt-0 lg:pb-10 md:pb-0 pb-16 lg:w-[90vw] [100vw] h-[100vh] items-end overflow-hidden m-auto ">
-        <div class="scroll bg-gradient-to-l from-[#18181b] to-[#27272a] max-h-[100%] overflow-y-scroll">
-
+    <div
+      class="md:flex lg:pt-10 pt-0 lg:pb-10 md:pb-0 pb-16 lg:w-[90vw] [100vw] h-[100vh] items-end overflow-hidden m-auto"
+    >
+      <div
+        class="scroll bg-gradient-to-l from-[#18181b] to-[#27272a] max-h-[100%] overflow-y-scroll"
+      >
         <!-- Main image with contant -->
         <div class="relative flex justify-center pt-20">
           <div class="first relative flex justify-center items-center">
@@ -45,7 +52,7 @@
               <h3
                 class="m-0 text-accent text-[#ef4444] font-bold lg:text-4xl text-3xl"
               >
-                5+
+                6+
               </h3>
               <p
                 class="mt-2 mb-0 text-omega-300 lg:text-xl md:text-xl sm:text-lg text-base text-wrap font-medium text-[#d4d4d8]"
@@ -61,7 +68,7 @@
               <h3
                 class="m-0 text-accent text-[#ef4444] font-bold lg:text-4xl text-3xl"
               >
-                50+
+                30+
               </h3>
               <p
                 class="mt-2 mb-0 text-omega-300 md:text-xl sm:text-lg text-base text-wrap font-medium text-[#d4d4d8]"
@@ -77,7 +84,7 @@
               <h3
                 class="m-0 text-accent text-[#ef4444] font-bold lg:text-4xl text-3xl"
               >
-                12
+                3
               </h3>
               <p
                 class="mt-2 mb-0 text-omega-300 md:text-xl sm:text-lg text-base text-wrap font-medium text-[#d4d4d8]"
@@ -93,7 +100,7 @@
               <h3
                 class="m-0 text-accent text-[#ef4444] font-bold lg:text-4xl text-3xl"
               >
-                50+
+                30+
               </h3>
               <p
                 class="mt-2 mb-0 text-omega-300 md:text-xl sm:text-lg text-base text-wrap font-medium text-[#d4d4d8]"
@@ -121,11 +128,15 @@
 
           <div class="FScont">
             <p class="md:text-xl sm:text-lg text-base pt-6 text-[#d4d4d8]">
-              With over 5 years of hands-on experience, I excel in crafting
-              robust enterprise-level applications and creating seamless user
-              experiences. I thrive on managing multiple concurrent projects
-              within agile environments, bringing a wealth of expertise in both
-              development and leadership.
+              As an expert in implementing infrastructure designs, I enhance
+              system reliability and efficiency. I am committed to ensuring the
+              protection of sensitive data through rigorous security protocols.
+              Additionally, I am skilled in developing and executing automated
+              testing strategies to ensure high-quality software. My project
+              management capabilities allow me to oversee projects from
+              conception to deployment, ensuring timely and successful delivery.
+              My experience in designing software architectures supports the
+              development of robust and scalable solutions.
             </p>
           </div>
 
@@ -147,32 +158,44 @@
         <!-- Images under Button -->
         <div class="md:flex hidden justify-around m-auto mb-16 mt-14">
           <h1 class="text-white text-3xl font-bold">Trusted By</h1>
-          <img src="/assets/svg/home/1st.svg" alt="" class="w-36 Limg1" />
-          <img src="/assets/svg/home/2nd.svg" alt="" class="w-36 Limg2" />
-          <img src="/assets/svg/home/2nd.svg" alt="" class="w-36 Limg3" />
-          <img src="/assets/svg/home/4th.svg" alt="" class="w-36 Limg4" />
+          <img
+            src="/assets/images/home/neuronus.png"
+            alt=""
+            class="w-36"
+          />
+          <img
+            src="/assets/images/home/orangshine.png"
+            alt=""
+            class="w-36"
+          />
+          <img src="/assets/images/home/pashione.png" alt="" class="w-36 Limg3" />
+          <img src="/assets/images/home/degree37.png" alt="" class="w-36 Limg4" />
         </div>
       </div>
 
       <!-- Navbar -->
-      <div class="nav md:w-[150px] w-[100%] md:relative fixed bottom-0 z-50">
+      <div
+        class="nav md:w-[300px] w-[100%] md:relative fixed bottom-0 z-50"
+        id="nav"
+      >
         <ul class="justify-center list-none text-white flex md:flex-col">
           <!-- Home page -->
-          <li
-            id="colorButton"
-            class="bg-gradient-to-t from-[#18181b] to-[#27272a] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"
-            onclick="location.href = '/pages/home.html'"
-          >
-            <div
-              class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]"
+          <a href="home.html" class="menuItem">
+            <li
+              id="colorButton"
+              class="bg-gradient-to-t from-[#18181b] to-[#27272a] hover:bg-red-700 h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"
             >
-              Home
-            </div>
-            <span
-              class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block"
-            ></span
-            ><img src="/assets/svg/nav/home.svg" alt="" class="w-6" />
-          </li>
+              <div
+                class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-gradient-to-t from-[#b91c1c] to-[#ef4444]"
+              >
+                Home
+              </div>
+              <span
+                class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block"
+              ></span
+              ><img src="/assets/svg/nav/home.svg" alt="" class="w-6" />
+            </li>
+          </a>
 
           <!-- About page -->
           <li
@@ -249,6 +272,7 @@
       </div>
     </div>
     <script>
+      const menuItems = document.querySelectorAll("#nav a");
       // JavaScript code for changing button color on click
       const colorButton = document.getElementById("colorButton");
 
@@ -258,6 +282,9 @@
         colorButton.classList.toggle("bg-green-900");
         // colorButton.classList.toggle('hover:bg-[#192380]');
       });
+      // const allAncher = menuItems.forEach(;
+      console.log(location.href.split("pages/")[1].split(".")[0]);
+      console.log(menuItems[0].innerHTML);
     </script>
   </body>
 </html>
