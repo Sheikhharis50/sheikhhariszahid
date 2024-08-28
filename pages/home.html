@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/assets/css/home.css" />
+    <link rel="stylesheet" href="/assets/css/global.css">
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
@@ -173,118 +174,81 @@
         </div>
       </div>
 
-      <!-- Navbar -->
-      <div
-        class="nav md:w-[300px] w-[100%] md:relative fixed bottom-0 z-50"
-        id="nav"
-      >
-        <ul class="justify-center list-none text-white flex md:flex-col">
-          <!-- Home page -->
-          <a href="home.html" class="menuItem">
-            <li
-              id="colorButton"
-              class="bg-gradient-to-t from-[#18181b] to-[#27272a] hover:bg-red-700 h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"
-            >
-              <div
-                class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-gradient-to-t from-[#b91c1c] to-[#ef4444]"
-              >
-                Home
-              </div>
-              <span
-                class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block"
-              ></span
-              ><img src="/assets/svg/nav/home.svg" alt="" class="w-6" />
-            </li>
-          </a>
-
-          <!-- About page -->
-          <li
-            class="bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"
-            onclick="location.href = '/pages/about.html'"
-          >
-            <div
-              class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]"
-            >
-              About
-            </div>
-            <span
-              class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block"
-            ></span
-            ><img src="/assets/svg/nav/about.svg" alt="" class="w-6" />
-          </li>
-
-          <!-- Services page -->
-          <li
-            class="bg-gradient-to-l from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 md:w-auto w-1/4 transition-all duration-300 text-white group"
-            onclick="location.href = '/pages/services.html'"
-          >
-            <div
-              class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]"
-            >
-              Services
-            </div>
-            <span
-              class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block"
-            >
-            </span>
-            <img src="/assets/svg/nav/services.svg" alt="" class="w-6" />
-          </li>
-
-          <!-- Projects page -->
-          <li
-            class="bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"
-            onclick="location.href = '/pages/project.html'"
-          >
-            <div
-              class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]"
-            >
-              Projects
-            </div>
-            <span
-              class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block"
-            ></span
-            ><img src="/assets/svg/nav/projects.svg" alt="" class="w-6" />
-          </li>
-
-          <!-- Contact page -->
-          <li
-            class="bg-gradient-to-t from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative md:flex hidden items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"
-            onclick="location.href = '/pages/contact.html'"
-          >
-            <div
-              class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]"
-            >
-              Contact
-            </div>
-            <span
-              class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block"
-            ></span
-            ><img src="/assets/svg/nav/email.svg" alt="" class="w-6" />
-          </li>
-
-          <!-- Three Dots -->
-          <li
-            class="bg-gradient-to-t from-[#18181b] to-[#27272a] md:hidden h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-4 transition-all duration-300 text-white group md:w-auto w-1/4"
-          >
-            <img src="/assets/svg/nav/dot.svg" alt="" class="w-10" />
-          </li>
-        </ul>
+        <!-- Navbar -->
+        <div class="nav md:w-[300px] w-[100%] md:relative fixed bottom-0 z-50">
+          <ul class="justify-center list-none text-white flex md:flex-col">
+      
+              <!-- Home page -->
+              <li id="colorButton"
+                  class="md:w-auto w-1/5 bg-gradient-to-r from-[#b91c1c] to-[#ef4444] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"
+                  onclick="location.href = '/pages/home.html'"> 
+                  <div
+                      class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
+                      Home</div><span
+                      class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img
+                      src="/assets/svg/nav/home.svg" alt="" class="w-6">
+              </li>
+      
+              <!-- About page -->
+              <li
+                  class="md:w-auto w-1/5 bg-gradient-to-r from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group"
+                  onclick="location.href = '/pages/about.html'">
+                  <div
+                      class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
+                      About</div><span
+                      class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block "></span><img
+                      src="/assets/svg/nav/about.svg" alt="" class="w-6">
+              </li>
+      
+              <!-- Services page -->
+              <li class="md:w-auto w-1/5 bg-gradient-to-l from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group "
+                  onclick="location.href = '/pages/services.html'">
+                  <div
+                      class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
+                      Services
+                  </div>
+                  <span
+                      class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block ">
+                  </span>
+                  <img src="/assets/svg/nav/services.svg" alt="" class="w-6">
+              </li>
+      
+              <!-- Projects page -->
+              <li class="md:w-auto w-1/5 bg-gradient-to-l from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group "
+                  onclick="location.href = '/pages/project.html'">
+                  <div
+                      class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
+                      Project
+                  </div>
+                  <span
+                      class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block ">
+                  </span>
+                  <img src="/assets/svg/nav/projects.svg" alt="" class="w-6">
+              </li>
+      
+              <!-- Contact page -->
+              <li class="md:w-auto w-1/5 bg-gradient-to-l from-[#18181b] to-[#27272a] hover:bg-[#192380] h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-5 transition-all duration-300 text-white group "
+                  onclick="location.href = '/pages/contact.html'">
+                  <div
+                      class="h-[100%] items-center absolute right-full px-4 text-sm font-medium text-white md:flex hidden invisible translate-x-10 opacity-0 transition-all duration-300 group-hover:visible group-hover:translate-x-0 group-hover:opacity-100 bg-[#ef4444]">
+                      Contact
+                  </div>
+                  <span
+                      class="absolute top-0 right-0 hidden h-full w-1 bg-white/25 opacity-0 transition-opacity group-hover:opacity-100 md:block ">
+                  </span>
+                  <img src="/assets/svg/nav/email.svg" alt="" class="w-6">
+              </li>
+      
+              <!-- Three Dots -->
+              <!-- <li
+                  class="bg-gradient-to-t from-[#18181b] to-[#27272a] md:hidden h-16 md:h-auto relative flex items-center justify-center cursor-pointer md:py-4 transition-all duration-300 text-white group md:w-auto w-1/4">
+                  <img src="/assets/svg/nav/dot.svg" alt="" class="w-10">
+              </li> -->
+      
+      
+          </ul>
       </div>
     </div>
-    <script>
-      const menuItems = document.querySelectorAll("#nav a");
-      // JavaScript code for changing button color on click
-      const colorButton = document.getElementById("colorButton");
-
-      colorButton.addEventListener("click", function () {
-        // Toggle the 'active' class on click
-        colorButton.classList.toggle("bg-gradient-to-t");
-        colorButton.classList.toggle("bg-green-900");
-        // colorButton.classList.toggle('hover:bg-[#192380]');
-      });
-      // const allAncher = menuItems.forEach(;
-      console.log(location.href.split("pages/")[1].split(".")[0]);
-      console.log(menuItems[0].innerHTML);
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
