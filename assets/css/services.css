@@ -35,3 +35,10 @@ scale: 1;
          flex-direction: column !important;
     }
 } 
+
+@media only screen and (max-width: 900px) {
+    .widthfull {
+        width: 100% !important;
+    }
+} 
+
