@@ -84,7 +84,7 @@ export default function Home() {
           <div className="absolute inset-[6px] rounded-full bg-zinc-900" />
           {/* Profile image */}
           <img
-            src="/assets/images/home/profile.png"
+            src="/assets/images/home/profile.jpg"
             alt="Sheikh Haris Zahid"
             className="relative md:w-[380px] w-[260px] rounded-full"
             style={{ zIndex: 1 }}
