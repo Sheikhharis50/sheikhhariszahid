@@ -11,6 +11,7 @@ Personal portfolio website built with **React 18 + TypeScript + Vite + Tailwind 
 | Bundler | Vite 5 |
 | Styling | Tailwind CSS 3 |
 | Animations | Framer Motion 11 |
+| Icons | Lucide React |
 | Routing | React Router DOM 6 |
 | Deployment | Vercel |
 
@@ -34,36 +35,47 @@ npm run preview
 
 ```
 src/
-  main.tsx          → App entry point
-  App.tsx           → Router + page transitions (AnimatePresence)
-  index.css         → Tailwind directives + custom utilities
-  data.ts           → All portfolio content (typed constants)
+  main.tsx               → App entry point
+  App.tsx                → Router + page transitions (AnimatePresence)
+  index.css              → Tailwind directives + custom utilities
+  data.ts                → All portfolio content (typed constants + interfaces)
   components/
-    Layout.tsx      → Shell: particle background + cursor glow + navbar
-    Navbar.tsx      → Vertical sidebar (desktop) / bottom bar (mobile)
-    ParticleBg.tsx  → Canvas particle network animation
+    Layout.tsx           → Shell: particle background + cursor glow + navbar
+    Navbar.tsx           → Vertical sidebar (desktop) / bottom bar (mobile), lucide-react icons
+    ParticleBg.tsx       → Canvas particle network animation
   pages/
-    Home.tsx        → Hero, animated stats, typewriter, trusted-by logos
-    About.tsx       → Skill bars, experience timeline, education
-    Services.tsx    → 3-D tilt service cards
-    Projects.tsx    → Project showcase with hover effects
-    Contact.tsx     → Contact form with success state
+    Home.tsx             → Hero, animated stats, typewriter, trusted-by logos
+    About.tsx            → Skill bars, experience timeline, education
+    Services.tsx         → 3-D tilt service cards
+    Projects.tsx         → Project showcase with hover effects
+    Certifications.tsx   → Certification cards with hexagonal Toptal badge
+    Contact.tsx          → Contact form with success state
 
 public/
-  assets/           → Symlink to project-root assets/ (images, SVGs, PDF)
-
-assets/             → Static assets (images, SVGs, icons, resume PDF)
+  assets/
+    icons/               → favicon.ico
+    images/
+      home/              → profile.jpg, trusted-by logos (degree37, neuronus, orangshine, pashione)
+      project/           → project1–5 screenshots
+    svg/
+      about/
+        progress_bars/   → SVG icons for frontend/backend skill bars
+        progress_bar_03/ → SVG icons for DevOps skill bars
+        progress_bar_04/ → SVG icons for database skill bars
+      contact/           → github.svg, linkdin.svg
+    pdf/                 → Haris_Zahid_Resume.pdf
 ```
 
 ## Pages
 
 | Route | Description |
 |---|---|
-| `/home` | Hero with profile, animated stats counter, typewriter title |
-| `/about` | Skill progress bars, work experience timeline, education |
-| `/services` | Six service cards with 3-D mouse-tilt effect |
-| `/projects` | Five featured projects with tech stack badges |
-| `/contact` | Contact form + social links |
+| `/home` | Hero with profile, animated stats counter, typewriter title, trusted-by logos |
+| `/about` | Skill progress bars (4 categories), work experience timeline, education |
+| `/services` | Service cards with 3-D mouse-tilt effect |
+| `/projects` | Five featured projects with tech stack badges and hover effects |
+| `/certifications` | Certification cards; hexagonal Toptal badge + external credential links |
+| `/contact` | Contact form with success state + social links |
 
 ## Animations
 
