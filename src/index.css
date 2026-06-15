@@ -1,0 +1,103 @@
+@import "https://use.typekit.net/kmj5qkr.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-white overflow-hidden;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #18181b;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #06b6d4, #a78bfa);
+    border-radius: 99px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #0ea5e9, #c4b5fd);
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, #06b6d4, #6366f1, #a78bfa);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 4s ease infinite;
+  }
+
+  .gradient-text-blue {
+    background: linear-gradient(135deg, #29b1f5, #5ba3c7, #4c4ef0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .gradient-border {
+    background:
+      linear-gradient(#18181b, #18181b) padding-box,
+      linear-gradient(135deg, #06b6d4, #6366f1, #a78bfa) border-box;
+    border: 1px solid transparent;
+  }
+
+  .gradient-border-amber {
+    background:
+      linear-gradient(#18181b, #18181b) padding-box,
+      linear-gradient(135deg, #f59e0b, #fbbf24) border-box;
+    border: 1px solid transparent;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-md;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .section-scroll {
+    @apply bg-gradient-to-bl from-zinc-900 to-zinc-800 flex-1 overflow-y-auto;
+  }
+
+  .nav-tooltip {
+    @apply h-full items-center absolute right-full px-4 text-sm font-semibold text-white
+           md:flex hidden invisible translate-x-4 opacity-0
+           transition-all duration-200
+           group-hover:visible group-hover:translate-x-0 group-hover:opacity-100
+           whitespace-nowrap;
+    background: linear-gradient(135deg, #312e81, #4338ca);
+  }
+
+  .nav-item {
+    @apply relative flex items-center justify-center cursor-pointer
+           md:py-5 md:px-5 w-1/6 md:w-auto h-16 md:h-auto
+           transition-all duration-300;
+  }
+
+  .skill-bar-container {
+    @apply relative h-2 bg-zinc-700 rounded-full overflow-hidden;
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
