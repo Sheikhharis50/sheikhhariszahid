@@ -3,6 +3,7 @@ export interface Certification {
   issuer: string
   date?: string
   url?: string
+  icon?: string
 }
 
 export interface Skill {
@@ -297,4 +298,29 @@ export const trustedBy = [
   { name: 'Degree37', logo: '/assets/images/home/degree37.png' },
 ]
 
-export const certifications: Certification[] = []
+export const certifications: Certification[] = [
+  {
+    title: 'Machine Learning',
+    issuer: 'DeepLearning.AI',
+    icon: '/assets/svg/certifications/deeplearningai.svg',
+    url: 'https://www.coursera.org/account/accomplishments/verify/6P68P0CO7GA7?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course',
+  },
+  {
+    title: 'NodeJS Certificate',
+    issuer: 'HackerRank',
+    icon: '/assets/svg/certifications/hackerrank.svg',
+    url: 'https://www.hackerrank.com/certificates/748733b39606',
+  },
+  {
+    title: 'Python Certificate',
+    issuer: 'HackerRank',
+    icon: '/assets/svg/certifications/hackerrank.svg',
+    url: 'https://www.hackerrank.com/certificates/488e06656465',
+  },
+  {
+    title: 'Problem Solving (Basic) Certificate',
+    issuer: 'HackerRank',
+    icon: '/assets/svg/certifications/hackerrank.svg',
+    url: 'https://www.hackerrank.com/certificates/92872e7803f3',
+  },
+]
