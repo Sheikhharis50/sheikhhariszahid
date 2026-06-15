@@ -1,7 +1,7 @@
-import { useState, useRef, type MouseEvent } from 'react'
 import { motion } from 'framer-motion'
 import { Brain, Database, MessageSquare, Layers, Server, Lightbulb } from 'lucide-react'
 import { services } from '../data'
+import TiltCard from '../components/TiltCard'
 
 const serviceIcons: Record<string, React.ReactNode> = {
   'AI Integration': <Brain size={40} className="text-white mb-3" />,
@@ -38,35 +38,6 @@ const expectList = [
     body: 'Vendor-neutral guidance on model selection, architecture, cost optimisation, and building the right AI system for your specific use case.',
   },
 ]
-
-// ---------- 3-D tilt card ----------
-function TiltCard({ children }: { children: React.ReactNode }) {
-  const ref = useRef<HTMLDivElement>(null)
-  const [style, setStyle] = useState({})
-
-  const handleMove = (e: MouseEvent<HTMLDivElement>) => {
-    const el = ref.current
-    if (!el) return
-    const { left, top, width, height } = el.getBoundingClientRect()
-    const x = ((e.clientX - left) / width - 0.5) * 14
-    const y = ((e.clientY - top) / height - 0.5) * -14
-    setStyle({ transform: `perspective(900px) rotateX(${y}deg) rotateY(${x}deg) scale(1.02)` })
-  }
-
-  const handleLeave = () => setStyle({ transform: 'perspective(900px) rotateX(0) rotateY(0) scale(1)' })
-
-  return (
-    <div
-      ref={ref}
-      onMouseMove={handleMove}
-      onMouseLeave={handleLeave}
-      className="h-full flex flex-col"
-      style={{ ...style, transition: 'transform 0.15s ease', transformStyle: 'preserve-3d' }}
-    >
-      {children}
-    </div>
-  )
-}
 
 const sectionHeadingStyle = {
   background: 'linear-gradient(135deg, #f59e0b, #fbbf24)',
