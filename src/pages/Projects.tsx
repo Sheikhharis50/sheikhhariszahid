@@ -37,7 +37,7 @@ export default function Projects() {
             className="bg-zinc-800/70 border border-zinc-700/30 rounded-lg overflow-hidden group"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.6, delay: i * 0.08 }}
             whileHover={{ borderColor: 'rgba(99,102,241,0.4)' }}
           >
