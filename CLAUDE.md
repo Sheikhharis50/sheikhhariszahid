@@ -21,25 +21,43 @@ Running a single page is just navigating to the route, e.g. `http://localhost:51
 
 ```
 src/
-  main.tsx           → ReactDOM.createRoot entry, wraps App in BrowserRouter
-  App.tsx            → Routes (/, /home, /about, /services, /projects, /contact) + AnimatePresence
-  index.css          → Tailwind directives + custom utilities (gradient-text, glass, nav-item, skill-bar-container)
-  data.ts            → All portfolio content as typed TypeScript constants (stats, skillCategories, experiences, services, projects, trustedBy)
+  main.tsx               → ReactDOM.createRoot entry, wraps App in BrowserRouter
+  App.tsx                → Routes (/, /home, /about, /services, /projects, /certifications, /contact) + AnimatePresence
+  index.css              → Tailwind directives + custom utilities (gradient-text, glass, nav-item, skill-bar-container)
+  data.ts                → All portfolio content as typed TypeScript constants + interfaces (stats, skillCategories, experiences, services, projects, trustedBy, certifications)
   components/
-    Layout.tsx       → Outer shell: ParticleBg + CursorGlow + Navbar sidebar
-    Navbar.tsx       → Right-side vertical nav (desktop) / bottom nav (mobile), useLocation for active state
-    ParticleBg.tsx   → Canvas particle network animation, fixed behind all content
+    Layout.tsx           → Outer shell: ParticleBg + CursorGlow + Navbar sidebar
+    Navbar.tsx           → Right-side vertical nav (desktop) / bottom nav (mobile), lucide-react icons, useLocation for active state
+    ParticleBg.tsx       → Canvas particle network animation, fixed behind all content
   pages/
-    Home.tsx         → Hero, animated counter stats, typewriter title, download resume button, trusted-by logos
-    About.tsx        → Skill bars (whileInView fill animation), experience timeline, education, CTA
-    Services.tsx     → 3-D tilt service cards + intro text columns
-    Projects.tsx     → Project cards with hover effects, tech badge stagger animation
-    Contact.tsx      → Controlled form with success state, social links
+    Home.tsx             → Hero, animated counter stats, typewriter title, download resume button, trusted-by logos
+    About.tsx            → Skill bars (whileInView fill animation, 4 categories), experience timeline, education, CTA
+    Services.tsx         → 3-D tilt service cards + intro text columns
+    Projects.tsx         → Project cards with hover effects, tech badge stagger animation
+    Certifications.tsx   → Certification cards grid; hexagonal Toptal badge (SVG clip-path); ExternalLink icons from lucide-react
+    Contact.tsx          → Controlled form with success state, social links
 ```
 
 ## Static Assets
 
-`public/assets` is a symlink to `../assets` (the existing asset directory at project root). This lets `/assets/images/...`, `/assets/svg/...`, and `/assets/pdf/...` paths work as-is in both dev and production. **Never move or delete the symlink** — it wires Vite's public dir to the legacy asset tree.
+All static assets live directly under `public/assets/` (no symlink — the legacy root-level `assets/` directory no longer exists):
+
+```
+public/assets/
+  icons/               → favicon.ico
+  images/
+    home/              → profile.jpg, trusted-by logos (degree37, neuronus, orangshine, pashione)
+    project/           → project1–5 screenshots
+  svg/
+    about/
+      progress_bars/   → SVG icons for frontend/backend skill bars (React, TypeScript, Node.js, etc.)
+      progress_bar_03/ → SVG icons for DevOps/tools bars (AWS, Docker, GitHub, etc.)
+      progress_bar_04/ → SVG icons for database bars (MongoDB, Redis, Kafka, etc.)
+    contact/           → github.svg, linkdin.svg
+  pdf/                 → Haris_Zahid_Resume.pdf
+```
+
+Reference assets via `/assets/images/...`, `/assets/svg/...`, `/assets/pdf/...`.
 
 ## Key Conventions
 
