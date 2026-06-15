@@ -94,7 +94,7 @@ export default function Home() {
 
         {/* Name */}
         <motion.h1
-          className="gradient-text mt-6 font-extrabold text-center text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-tight px-4"
+          className="text-white mt-6 font-extrabold text-center text-4xl sm:text-6xl md:text-7xl lg:text-8xl leading-tight px-4"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}

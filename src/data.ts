@@ -42,7 +42,7 @@ export interface Project {
 }
 
 export const stats = [
-  { value: 6, suffix: '+', label: 'Years of Experience' },
+  { value: 7, suffix: '+', label: 'Years of Experience' },
   { value: 15, suffix: '+', label: 'AI Products Built' },
   { value: 30, suffix: '+', label: 'Projects Completed' },
   { value: 30, suffix: '+', label: 'Happy Customers' },
