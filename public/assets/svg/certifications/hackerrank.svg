@@ -1,0 +1,5 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" rx="10" fill="#2EC866"/>
+  <!-- HackerRank stylised H -->
+  <path d="M12 10h5v11.5h14V10h5v28h-5V26.5H17V38h-5V10z" fill="white"/>
+</svg>
