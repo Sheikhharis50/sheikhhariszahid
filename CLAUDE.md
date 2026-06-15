@@ -54,7 +54,7 @@ public/assets/
       progress_bar_03/ → SVG icons for DevOps/tools bars (AWS, Docker, GitHub, etc.)
       progress_bar_04/ → SVG icons for database bars (MongoDB, Redis, Kafka, etc.)
     contact/           → github.svg, linkdin.svg
-  pdf/                 → Haris_Zahid_Resume.pdf
+  pdf/                 → resume.pdf
 ```
 
 Reference assets via `/assets/images/...`, `/assets/svg/...`, `/assets/pdf/...`.
