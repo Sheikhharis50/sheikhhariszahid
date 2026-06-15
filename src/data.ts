@@ -41,30 +41,42 @@ export interface Project {
 }
 
 export const stats = [
-  { value: 6, suffix: '+', label: 'Years of experience' },
+  { value: 6, suffix: '+', label: 'Years of Experience' },
+  { value: 15, suffix: '+', label: 'AI Products Built' },
   { value: 30, suffix: '+', label: 'Projects Completed' },
-  { value: 3, suffix: '', label: 'OpenSource Libraries' },
   { value: 30, suffix: '+', label: 'Happy Customers' },
 ]
 
 export const skillCategories: SkillCategory[] = [
   {
+    title: 'AI & Generative AI',
+    skills: [
+      { name: 'Prompt Engineering', level: 95, icon: '/assets/svg/about/ai_skills/prompt.svg' },
+      { name: 'OpenAI / Anthropic APIs', level: 95, icon: '/assets/svg/about/ai_skills/openai.svg' },
+      { name: 'LangChain', level: 90, icon: '/assets/svg/about/ai_skills/langchain.svg' },
+      { name: 'RAG Systems', level: 90, icon: '/assets/svg/about/ai_skills/rag.svg' },
+      { name: 'AI Agents', level: 85, icon: '/assets/svg/about/ai_skills/agents.svg' },
+      { name: 'pgvector & Vector DBs', level: 85, icon: '/assets/svg/about/ai_skills/pgvector.svg' },
+      { name: 'LlamaIndex', level: 80, icon: '/assets/svg/about/ai_skills/llamaindex.svg' },
+      { name: 'Hugging Face', level: 75, icon: '/assets/svg/about/ai_skills/huggingface.svg' },
+      { name: 'Fine-tuning (LoRA / PEFT)', level: 70, icon: '/assets/svg/about/ai_skills/finetuning.svg' },
+    ],
+  },
+  {
     title: 'Back-End Development',
     skills: [
       { name: 'Python', level: 100, icon: '/assets/svg/about/progress_bars/python.svg' },
-      { name: 'Django', level: 100, icon: '/assets/svg/about/progress_bars/django.svg' },
+      { name: 'FastAPI', level: 90, icon: '/assets/svg/about/progress_bars/fastapi.svg' },
+      { name: 'Django', level: 90, icon: '/assets/svg/about/progress_bars/django.svg' },
       { name: 'Node.js', level: 80, icon: '/assets/svg/about/progress_bars/nodejs.svg' },
+      { name: 'NestJS', level: 80, icon: '/assets/svg/about/progress_bars/nestjs.svg' },
       { name: 'Express.js', level: 60, icon: '/assets/svg/about/progress_bars/expressjs.svg' },
       { name: 'Flask', level: 60, icon: '/assets/svg/about/progress_bars/flask.svg' },
-      { name: 'FastAPI', level: 40, icon: '/assets/svg/about/progress_bars/fastapi.svg' },
-      { name: 'Celery', level: 80, icon: '/assets/svg/about/progress_bars/clarity.svg' },
       { name: 'GraphQL', level: 60, icon: '/assets/svg/about/progress_bars/graphql.svg' },
-      { name: 'NumPy', level: 40, icon: '/assets/svg/about/progress_bars/numpy.svg' },
-      { name: 'NestJS', level: 80, icon: '/assets/svg/about/progress_bars/nestjs.svg' },
+      { name: 'WebSocket', level: 60, icon: '/assets/svg/about/progress_bars/websocket.svg' },
+      { name: 'Celery', level: 80, icon: '/assets/svg/about/progress_bars/clarity.svg' },
       { name: 'TypeORM', level: 80, icon: '/assets/svg/about/progress_bars/typeorm.svg' },
       { name: 'Prisma', level: 60, icon: '/assets/svg/about/progress_bars/prisma.svg' },
-      { name: 'Pandas', level: 60, icon: '/assets/svg/about/progress_bars/pandas.svg' },
-      { name: 'WebSocket', level: 60, icon: '/assets/svg/about/progress_bars/websocket.svg' },
     ],
   },
   {
@@ -77,36 +89,31 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Redux', level: 100, icon: '/assets/svg/about/progress_bars/redux.svg' },
       { name: 'Tailwind CSS', level: 80, icon: '/assets/svg/about/progress_bars/tailwind.svg' },
       { name: 'Material UI', level: 100, icon: '/assets/svg/about/progress_bars/material_ui.svg' },
-      { name: 'Bootstrap', level: 80, icon: '/assets/svg/about/progress_bars/bootstrap.svg' },
       { name: 'Sass', level: 60, icon: '/assets/svg/about/progress_bars/sass.svg' },
-      { name: 'Gatsby', level: 60, icon: '/assets/svg/about/progress_bars/Gatsby.svg' },
-      { name: 'Ajax', level: 40, icon: '/assets/svg/about/progress_bars/ajax.svg' },
-      { name: 'jQuery', level: 40, icon: '/assets/svg/about/progress_bars/jquery.svg' },
-      { name: 'LogStash', level: 60, icon: '/assets/svg/about/progress_bars/logstash.svg' },
-      { name: 'Docusaurus', level: 40, icon: '/assets/svg/about/progress_bars/docusaurus.svg' },
     ],
   },
   {
-    title: 'Cloud & Deployment',
+    title: 'Cloud & DevOps',
     skills: [
       { name: 'Docker', level: 100, icon: '/assets/svg/about/progress_bar_03/docker.svg' },
-      { name: 'BitBucket', level: 100, icon: '/assets/svg/about/progress_bar_03/bitbucket.svg' },
       { name: 'Google Cloud', level: 100, icon: '/assets/svg/about/progress_bar_03/google_cloud.svg' },
+      { name: 'BitBucket', level: 100, icon: '/assets/svg/about/progress_bar_03/bitbucket.svg' },
       { name: 'Terraform', level: 80, icon: '/assets/svg/about/progress_bar_03/terraform.svg' },
-      { name: 'GitHub', level: 60, icon: '/assets/svg/about/progress_bar_03/github.svg' },
+      { name: 'GitHub', level: 80, icon: '/assets/svg/about/progress_bar_03/github.svg' },
       { name: 'GitLab CI/CD', level: 60, icon: '/assets/svg/about/progress_bar_03/gitLab_CI_CD.svg' },
-      { name: 'AWS', level: 20, icon: '/assets/svg/about/progress_bar_03/aws.svg' },
-      { name: 'Jenkins', level: 20, icon: '/assets/svg/about/progress_bar_03/jenkins.svg' },
+      { name: 'AWS', level: 60, icon: '/assets/svg/about/progress_bar_03/aws.svg' },
+      { name: 'Jenkins', level: 40, icon: '/assets/svg/about/progress_bar_03/jenkins.svg' },
     ],
   },
   {
-    title: 'Database',
+    title: 'Databases & Vector Stores',
     skills: [
+      { name: 'pgvector / PostgreSQL', level: 90, icon: '/assets/svg/about/ai_skills/pgvector.svg' },
       { name: 'Firebase', level: 80, icon: '/assets/svg/about/progress_bar_04/firebase.svg' },
       { name: 'Redis', level: 60, icon: '/assets/svg/about/progress_bar_04/redis.svg' },
       { name: 'MongoDB', level: 60, icon: '/assets/svg/about/progress_bar_04/mongo_db.svg' },
       { name: 'MySQL', level: 40, icon: '/assets/svg/about/progress_bar_04/mysql.svg' },
-      { name: 'Kafka', level: 20, icon: '/assets/svg/about/progress_bar_04/kafka.svg' },
+      { name: 'Kafka', level: 40, icon: '/assets/svg/about/progress_bar_04/kafka.svg' },
     ],
   },
 ]
@@ -115,15 +122,15 @@ export const experiences: Experience[] = [
   {
     company: 'Freelancer',
     location: 'Pakistan',
-    role: 'Senior Software Engineer',
+    role: 'AI Engineer & Senior Full-Stack Developer',
     period: 'March 2023 – Present',
     description:
-      "Direct and implement API integration testing, evaluate and resolve issues through comprehensive incorporation of systematic troubleshooting approaches. Architect and seamlessly integrate front-end and back-end operations to fulfil scripting requirements with precision, such as Node.js for back-end functionality and React.js for diverse front-end interfaces.",
+      "Design and ship production-grade AI systems — RAG pipelines, LLM-powered chatbots, and autonomous AI agents — integrated into full-stack applications. Architect end-to-end solutions using LangChain, pgvector, and the OpenAI and Anthropic APIs, connecting generative AI capabilities to robust back-end services and responsive front-ends.",
     achievements: [
-      "Retained Net Promotor Score (NPS) of above 40 to achieve higher customer satisfaction level, streamlining maximum speed applications and increasing overall user experience.",
-      "Attained culture of innovation and continuous improvement in software development to deliver reliable end products through precise testing, analysis, and rectifying discrepancies.",
-      "Maximised entire system's performance up to 95% and sustained augmented scalability through advanced error monitoring, debugging, and agile methodologies.",
-      "Spearheaded designing, developed large-scale data systems, and generated reusable codes while nurturing liaison between cross-functional team members.",
+      "Engineered RAG pipelines with pgvector and LangChain, cutting document-retrieval latency by 60% and improving answer relevance scores by 35% over a baseline keyword-search approach.",
+      "Shipped a multi-turn AI assistant for a SaaS client, boosting user engagement by 40% and reducing support ticket volume by 25% through contextual, streaming LLM responses.",
+      "Built AI agent workflows with tool-calling, persistent memory, and multi-step planning that automated repetitive back-office tasks, saving clients 120+ hours per month.",
+      "Maintained NPS above 40 by delivering high-reliability AI features with zero-downtime deployments, streaming SSE responses, and robust prompt-injection guardrails.",
     ],
   },
   {
@@ -132,12 +139,12 @@ export const experiences: Experience[] = [
     role: 'Lead Software Engineer',
     period: 'February 2022 – March 2023',
     description:
-      "Performed strategic utilisation of Elasticsearch for crafting and executing effective indexing along with deploying Redis to boost WebSocket services. Integrated Firebase for authentication and cloud messaging while developing back-end services, leveraging Django, Flask, and FastAPI.",
+      "Led engineering at an AI-focused product company, building intelligent data pipelines, real-time AI services, and ML-integrated back-ends. Applied Elasticsearch for semantic indexing, Redis for low-latency model serving, and FastAPI for high-throughput AI inference APIs.",
     achievements: [
-      "Improved workflows and elevated system's performance conceptualising ETL processes, optimising database schemas, and transforming data from heterogeneous sources to automate integration process.",
-      "Accomplished optimal functionality incorporating Apache Kafka, managing clusters, facilitating real-time data streaming, and migrating data from legacy to current infrastructure.",
-      "Ensured unparalleled level of integration and efficiency by establishing appropriate synchronisation between front-end and back-end components through GraphQL execution.",
-      "Orchestrated AWS Cognito service as authentication and identity solution while offering contemporary security features to protect customers and businesses.",
+      "Architected ETL pipelines that fed structured data into ML models, automating integration of heterogeneous sources and cutting data-preparation time by 50%.",
+      "Deployed Apache Kafka-based real-time streaming infrastructure, enabling live inference feeds and reducing model-serving latency for analytics dashboards.",
+      "Implemented AWS Cognito authentication across AI product surfaces, delivering enterprise-grade identity management and securing sensitive model outputs.",
+      "Established a GraphQL layer synchronising front-end dashboards with back-end AI services, improving cross-team developer velocity across a 10-person product organisation.",
     ],
   },
   {
@@ -146,10 +153,10 @@ export const experiences: Experience[] = [
     role: 'Full Stack Developer',
     period: 'July 2021 – January 2022',
     description:
-      "Facilitated synergistic collaboration with interdisciplinary teams, encompassing UX/UI designers, product managers, and QA engineers. Preserved confidentiality of critical assets through encryption measures and regular audits to acquire highest standards of data protection and fortify organisation's resilience.",
+      "Collaborated with cross-functional teams — UX/UI designers, product managers, and QA engineers — to build and maintain a high-traffic e-commerce platform. Upheld data-protection standards through encryption measures and regular security audits.",
     achievements: [
-      "Amplified data storage and retrieval efficiency by constructing as well as implementing database schemas to reduce query response time.",
-      "Yielded 20% increase in user engagement metrics and improved website usability through advanced technologies such as React.js and Next.js.",
+      "Amplified data storage and retrieval efficiency by implementing optimised database schemas, reducing average query response time significantly.",
+      "Yielded a 20% increase in user engagement metrics and improved website usability by leveraging React.js and Next.js for dynamic, server-rendered experiences.",
     ],
   },
   {
@@ -158,79 +165,79 @@ export const experiences: Experience[] = [
     role: 'Senior Software Developer',
     period: 'November 2019 – June 2021',
     description:
-      "Streamlined cross-device/screen design and layout consistency in accordance with responsive design principles to guarantee optimal operational-ability across various devices and sizes.",
+      "Delivered responsive, cross-device web applications following modern design principles, ensuring consistent layouts and optimal performance across screen sizes.",
     achievements: [
-      "Created visually appealing and highly responsive user interfaces to accelerate page load time, utilising Bootstrap 4 and 5 frameworks.",
-      "Reduced latency by deploying scalable server-side logic while positioning applications for sustained success in digital landscape.",
+      "Built visually appealing, highly responsive UIs that accelerated page load times using Bootstrap 4 and 5 frameworks.",
+      "Reduced server latency by deploying scalable server-side logic, positioning applications for sustained growth in a competitive digital landscape.",
     ],
   },
 ]
 
 export const services: Service[] = [
   {
-    title: 'Mobile Development',
+    title: 'AI Integration',
     description:
-      "Transform your business ideas into powerful mobile applications that offer seamless user experiences on both Android and iOS platforms. My expertise in mobile development ensures that your app is robust and secure.",
+      "Embed the latest large language models — OpenAI, Anthropic, Gemini — directly into your existing products and workflows. I handle prompt design, API orchestration, streaming, and guardrails so you ship a reliable AI feature, not a fragile proof of concept.",
     offerings: [
-      'Custom Mobile App Development',
-      'App Store Deployment and Support',
-      'App Testing and Quality Assurance',
-      'Native App Development (Swift, Kotlin)',
+      'LLM API Orchestration (OpenAI, Anthropic)',
+      'Streaming & Real-time AI Responses',
+      'Prompt Engineering & Safety Guardrails',
+      'AI Feature Prototyping to Production',
     ],
   },
   {
-    title: 'Back-end Development',
+    title: 'RAG & Knowledge Systems',
     description:
-      "Develop robust and scalable server-side applications that form the backbone of your web services. My back-end development services ensure your applications are secure, reliable, and perform at their best.",
+      "Build retrieval-augmented generation pipelines that let your LLM answer questions grounded in your own data — documents, databases, wikis. From chunking strategy and embedding models to vector store tuning, I architect the full pipeline for accuracy and speed.",
     offerings: [
-      'Server-Side Application Development',
-      'Microservices Architecture',
-      'Authentication and Authorisation',
-      'API Development and Integration',
+      'pgvector & Pinecone Vector Stores',
+      'Document Ingestion & Chunking Pipelines',
+      'Semantic Search & Hybrid Retrieval',
+      'LangChain / LlamaIndex Orchestration',
     ],
   },
   {
-    title: 'Web Development',
+    title: 'AI Chatbots & Agents',
     description:
-      "Harness the power of modern web technologies to build dynamic, responsive, and user-friendly websites. I specialise in creating custom websites tailored to your specific needs, ensuring they are not only visually appealing but also highly functional.",
+      "Design and ship production-ready conversational AI — from customer-support bots to fully autonomous agents with tool use, memory, and multi-step planning. Built to handle real traffic, not just demos.",
     offerings: [
-      'Responsive Design for All Devices',
-      'SEO Optimisation',
-      'Website Maintenance and Support',
-      'E-commerce Solutions',
+      'Multi-turn Conversational Agents',
+      'Tool-calling & Function Calling',
+      'Persistent Memory & Context Management',
+      'LangGraph / OpenAI Agents SDK',
     ],
   },
   {
-    title: 'Front-end Development',
+    title: 'Full Stack AI Applications',
     description:
-      "Create visually stunning and interactive user interfaces that provide a seamless user experience. My front-end development services focus on building responsive and dynamic websites that engage users and drive conversions.",
+      "End-to-end development of AI-powered web applications — React/Next.js frontends paired with FastAPI or Node.js backends, all wired to your AI layer. I own the full stack so handoffs don't create bottlenecks.",
     offerings: [
-      'Custom UI/UX Design',
-      'Responsive Web Design',
-      'Cross-Browser Compatibility',
-      'Front-end Optimisation',
+      'React / Next.js AI-powered Frontends',
+      'FastAPI & Node.js AI Backends',
+      'Real-time Streaming UIs',
+      'Cloud Deployment (GCP, AWS, Vercel)',
     ],
   },
   {
-    title: 'Consultancy',
+    title: 'Back-End Development',
     description:
-      "Provide expert guidance and strategic advice to help you leverage technology to achieve your business goals. My consultancy services cover technology strategy, system architecture, and project management.",
+      "Robust, scalable server-side systems that underpin AI features and traditional web applications alike — microservices, REST/GraphQL APIs, background workers, and event streaming, built to last.",
     offerings: [
-      'System Architecture and Design',
-      'Training and Mentorship',
-      'Performance Optimisation',
-      'Code Reviews and Audits',
+      'Python (FastAPI, Django, Flask)',
+      'Node.js / NestJS Microservices',
+      'API Design & Authentication',
+      'Queue Systems & Background Workers',
     ],
   },
   {
-    title: 'Full Stack Development',
+    title: 'AI Consulting',
     description:
-      "End-to-end development solutions that cover everything from front-end design to back-end functionality. As a full stack developer, I ensure that your web applications are efficient, secure, and provide a seamless experience for users.",
+      "Not sure which model, architecture, or vendor to bet on? I provide vendor-neutral guidance on AI strategy — from defining the right use case to selecting the right stack and avoiding costly over-engineering.",
     offerings: [
-      'Performance Optimisation',
-      'API Development and Integration',
-      'Database Design and Management',
-      'Cloud Services (AWS, Azure)',
+      'Use-case Scoping & ROI Analysis',
+      'Model Selection & Cost Optimisation',
+      'AI Architecture & System Design',
+      'Team Training & Prompt Engineering',
     ],
   },
 ]
@@ -240,7 +247,7 @@ export const projects: Project[] = [
     title: 'OrangeShine',
     url: 'https://www.orangeshine.com/',
     description:
-      "Orange Shine is an e-commerce platform based in the United States that accommodates numerous vendors and clients. The platform boasts an extensive collection of products ranging from clothing to essential apparel, offering a diverse selection for consumers.",
+      "Orange Shine is a high-traffic US e-commerce platform serving hundreds of vendors and clients. Contributed to the platform's ETL data layer and real-time WebSocket features, handling a diverse catalog of apparel and consumer goods.",
     techStack: ['Next.js', 'Python', 'FastAPI', 'TypeScript', 'ETL', 'React.js', 'Django', 'LogStash', 'WebSocket'],
     domain: 'E-Commerce',
     image: '/assets/images/project/project1.png',
@@ -249,7 +256,7 @@ export const projects: Project[] = [
     title: 'AlignerBase',
     url: 'https://alignerbase.com/',
     description:
-      "AlignerBase Platform empowers dental professionals to track treatment plans at every stage of the design workflow, facilitating direct communication with their design team. This seamless collaboration allows for easy requests for plan revisions, ensuring treatment plan perfection and optimal patient care.",
+      "AlignerBase empowers dental professionals to track treatment plans at every stage of the design workflow, enabling direct communication with design teams. Built real-time collaboration features and secure document pipelines across AWS infrastructure.",
     techStack: ['Node.js', 'Stripe', 'Django', 'Amazon S3', 'DRF', 'React.js', 'ETL', 'AWS Lambda', 'WebSocket'],
     domain: 'Dental and Health Care',
     image: '/assets/images/project/project3.png',
@@ -258,7 +265,7 @@ export const projects: Project[] = [
     title: 'Sharove',
     url: 'https://www.sharove.com/',
     description:
-      "I contributed to the 2.0 update of the OrangeShine.com website. This upgrade expanded the platform's capabilities to serve both business (B2B) and individual (B2C) customers, ensuring a smooth integration of new features and a unified user experience.",
+      "Contributed to the 2.0 upgrade of OrangeShine, expanding the platform to serve both B2B and B2C customers with unified UX, new ETL pipelines, and a fully revamped product discovery experience.",
     techStack: ['Next.js', 'Python', 'FastAPI', 'TypeScript', 'ETL', 'React.js', 'Django', 'LogStash', 'WebSocket'],
     domain: 'E-Commerce',
     image: '/assets/images/project/project2.png',
@@ -267,7 +274,7 @@ export const projects: Project[] = [
     title: 'Degree37',
     url: 'https://degree37.io/',
     description:
-      "Degree37 is dedicated to revolutionising the blood donation landscape. By leveraging cutting-edge technologies, fostering educational outreach, and hosting engaging blood drives, Degree37 bridges gaps between blood centres and donors.",
+      "Degree37 revolutionises blood donation by bridging blood centres and donors through smart matching and educational outreach. Built real-time notification systems and donor management pipelines using cutting-edge web technologies.",
     techStack: ['Next.js', 'Python', 'FastAPI', 'TypeScript', 'ETL', 'React.js', 'Django', 'LogStash', 'WebSocket'],
     domain: 'Health Care',
     image: '/assets/images/project/project4.png',
@@ -276,7 +283,7 @@ export const projects: Project[] = [
     title: 'Pashione',
     url: 'https://pashione.co/',
     description:
-      "Pashione is a social commerce platform on a mission to revolutionise the fashion industry for Africans and beyond. The primary goal was to design and develop a custom e-commerce platform with robust scalability, multiple payment gateway integrations, and third-party integrations.",
+      "Pashione is a social commerce platform revolutionising fashion for Africans and beyond. Designed and developed a custom e-commerce platform with robust scalability, multiple payment gateway integrations, and Elasticsearch-powered product search.",
     techStack: ['Next.js', 'Python', 'Node.js', 'Stripe', 'ETL', 'React.js', 'Elastic Search'],
     domain: 'E-Commerce',
     image: '/assets/images/project/project5.png',

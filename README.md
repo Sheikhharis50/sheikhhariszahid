@@ -63,7 +63,7 @@ public/
         progress_bar_03/ → SVG icons for DevOps skill bars
         progress_bar_04/ → SVG icons for database skill bars
       contact/           → github.svg, linkdin.svg
-    pdf/                 → Haris_Zahid_Resume.pdf
+    pdf/                 → resume.pdf
 ```
 
 ## Pages

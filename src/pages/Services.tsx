@@ -1,41 +1,41 @@
 import { useState, useRef, type MouseEvent } from 'react'
 import { motion } from 'framer-motion'
-import { Smartphone, Server, Globe, Monitor, Lightbulb, Layers } from 'lucide-react'
+import { Brain, Database, MessageSquare, Layers, Server, Lightbulb } from 'lucide-react'
 import { services } from '../data'
 
 const serviceIcons: Record<string, React.ReactNode> = {
-  'Mobile Development': <Smartphone size={40} className="text-white mb-3" />,
-  'Back-end Development': <Server size={40} className="text-white mb-3" />,
-  'Web Development': <Globe size={40} className="text-white mb-3" />,
-  'Front-end Development': <Monitor size={40} className="text-white mb-3" />,
-  'Consultancy': <Lightbulb size={40} className="text-white mb-3" />,
-  'Full Stack Development': <Layers size={40} className="text-white mb-3" />,
+  'AI Integration': <Brain size={40} className="text-white mb-3" />,
+  'RAG & Knowledge Systems': <Database size={40} className="text-white mb-3" />,
+  'AI Chatbots & Agents': <MessageSquare size={40} className="text-white mb-3" />,
+  'Full Stack AI Applications': <Layers size={40} className="text-white mb-3" />,
+  'Back-End Development': <Server size={40} className="text-white mb-3" />,
+  'AI Consulting': <Lightbulb size={40} className="text-white mb-3" />,
 }
 
 const expectList = [
   {
-    title: 'Web Development',
-    body: 'Custom websites that are responsive, scalable, and optimised for performance. From e-commerce platforms to content management systems, I build solutions tailored to your needs.',
+    title: 'AI Integration',
+    body: 'Embedding OpenAI, Anthropic, and other LLMs into existing products — streaming responses, prompt design, and production guardrails that hold up under real load.',
   },
   {
-    title: 'Mobile Development',
-    body: 'High-quality mobile apps for both iOS and Android, using modern technologies to ensure a seamless user experience.',
+    title: 'RAG & Knowledge Systems',
+    body: 'End-to-end retrieval pipelines over your own data using pgvector, Pinecone, LangChain, and LlamaIndex for accurate, grounded answers — not hallucinations.',
   },
   {
-    title: 'Full Stack Development',
-    body: 'Comprehensive development services covering both front-end and back-end to deliver complete and efficient web applications.',
+    title: 'AI Chatbots & Agents',
+    body: 'Production-ready conversational agents with tool use, memory, and multi-step planning — far beyond a simple ChatGPT wrapper.',
   },
   {
-    title: 'Front-end Development',
-    body: 'Engaging and interactive user interfaces that provide a great user experience across all devices.',
+    title: 'Full Stack AI Applications',
+    body: 'React/Next.js frontends paired with FastAPI or Node.js backends, connected to your AI layer — deployed, monitored, and production-ready.',
   },
   {
-    title: 'Back-end Development',
-    body: 'Robust server-side solutions that ensure the reliability, security, and performance of your web applications.',
+    title: 'Back-End Development',
+    body: 'Scalable APIs, microservices, and event-driven systems in Python and Node.js, built to support both AI features and traditional workloads.',
   },
   {
-    title: 'Consultancy',
-    body: 'Expert advice on technology strategy, system architecture, and project management to help you navigate complex technical decisions.',
+    title: 'AI Consulting',
+    body: 'Vendor-neutral guidance on model selection, architecture, cost optimisation, and building the right AI system for your specific use case.',
   },
 ]
 
@@ -124,28 +124,30 @@ export default function Services() {
             My Expertise
           </h2>
           <p className="text-zinc-300 text-sm leading-relaxed mb-6">
-            I focus on creating digital solutions that are not only aesthetically pleasing but also
-            functional and user-friendly. My approach ensures that your products are shippable and
-            deliverable, addressing both design and technical challenges effectively.
+            I specialise in the full AI engineering stack — from prompt design and RAG pipelines
+            to production deployment. Whether you need to embed a single LLM feature or build an
+            autonomous agent from the ground up, I bring both the AI expertise and the full-stack
+            engineering to ship it reliably.
           </p>
           <h2 className="text-lg font-semibold mb-4" style={sectionHeadingStyle}>
-            Applications I'm Fluent In
+            Frameworks & Tools I Work With
           </h2>
           <ul className="space-y-3 text-zinc-300 text-sm">
             <li>
-              <span className="font-semibold text-white">Design Strategy</span>: Crafting a
-              strategic approach to design that aligns with your business goals and user needs.
+              <span className="font-semibold text-white">LLM Frameworks</span>: LangChain,
+              LlamaIndex, OpenAI Agents SDK, and LangGraph for building sophisticated AI pipelines
+              and agent workflows.
             </li>
             <li>
-              <span className="font-semibold text-white">Web and Mobile App Development</span>:
-              Developing intuitive and efficient web and mobile applications tailored to your
-              specific requirements.
+              <span className="font-semibold text-white">Full-Stack AI</span>: React/Next.js
+              frontends + FastAPI/Node.js backends, wired to vector databases and LLM APIs for
+              seamless, production-ready AI products.
             </li>
           </ul>
 
           <div className="relative inline-block group mt-8">
             <a
-              href="/assets/pdf/Haris_Zahid_Resume.pdf"
+              href="/assets/pdf/resume.pdf"
               download
               className="relative z-10 block bg-white text-black font-semibold py-4 px-8 transition-transform duration-200 group-hover:translate-x-1.5 group-hover:translate-y-1.5 text-sm"
             >

@@ -148,7 +148,7 @@ export default function Home() {
       >
         <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white flex items-center justify-center gap-3 h-14">
           <MoveRight className="w-5 sm:w-7 text-amber-400 shrink-0" />
-          <Typewriter text="Senior Software Engineer" />
+          <Typewriter text="Full-Stack AI Developer" />
         </h2>
 
         <motion.p
@@ -157,12 +157,10 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.4, duration: 0.8 }}
         >
-          As an expert in implementing infrastructure designs, I enhance system reliability and
-          efficiency. I am committed to ensuring the protection of sensitive data through rigorous
-          security protocols. Additionally, I am skilled in developing and executing automated
-          testing strategies to ensure high-quality software. My project management capabilities
-          allow me to oversee projects from conception to deployment, ensuring timely and successful
-          delivery.
+          Specialising in Generative AI integration, RAG systems, and AI-powered applications.
+          I architect end-to-end solutions — from LLM orchestration and vector databases to
+          production-ready full-stack apps. 7+ years building scalable systems, now laser-focused
+          on the AI engineering layer that turns cutting-edge models into real product value.
         </motion.p>
       </motion.div>
 
@@ -175,7 +173,7 @@ export default function Home() {
       >
         <div className="relative group">
           <a
-            href="/assets/pdf/Haris_Zahid_Resume.pdf"
+            href="/assets/pdf/resume.pdf"
             download
             className="relative z-10 block bg-white text-black font-semibold py-4 px-8 transition-transform duration-200 group-hover:translate-x-1.5 group-hover:translate-y-1.5"
           >

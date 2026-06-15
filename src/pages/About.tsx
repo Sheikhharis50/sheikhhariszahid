@@ -74,7 +74,7 @@ export default function About() {
             }}
           >
             <MoveRight className="w-5 shrink-0" style={{ color: '#06b6d4' }} />
-            Modern Frameworks_
+            AI Engineering_
           </h3>
         </motion.div>
 
@@ -173,7 +173,7 @@ export default function About() {
           <p className="text-zinc-300 mt-1 mb-6">Let's super-charge your business today!</p>
           <div className="relative inline-block group">
             <a
-              href="/assets/pdf/Haris_Zahid_Resume.pdf"
+              href="/assets/pdf/resume.pdf"
               download
               className="relative z-10 block bg-white text-black font-semibold py-4 px-8 transition-transform duration-200 group-hover:translate-x-1.5 group-hover:translate-y-1.5"
             >
