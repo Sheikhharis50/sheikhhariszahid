@@ -44,7 +44,7 @@ function SkillBar({ name, level, icon, index }: { name: string; level: number; i
             }}
             initial={{ width: 0 }}
             whileInView={{ width: `${level}%` }}
-            viewport={{ once: true, margin: '-80px' }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 1, delay: index * 0.04, ease: 'easeOut' }}
           />
         </div>
@@ -89,7 +89,7 @@ export default function About() {
                 variants={stagger}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: '-80px' }}
+                viewport={{ once: true, amount: 0.1 }}
               >
                 {cat.skills.map((skill, i) => (
                   <SkillBar key={skill.name} {...skill} index={i} />
@@ -118,7 +118,7 @@ export default function About() {
               className="border-b border-zinc-600/50 py-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.6, delay: (i % 2) * 0.15 }}
             >
               {/* Top row */}

@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Home, User, Briefcase, FolderOpen, Mail } from 'lucide-react'
+import { Home, User, Briefcase, FolderOpen, Mail, Award } from 'lucide-react'
 
 const navItems = [
   { path: '/home', label: 'Home', Icon: Home },
   { path: '/about', label: 'About', Icon: User },
   { path: '/services', label: 'Services', Icon: Briefcase },
   { path: '/projects', label: 'Projects', Icon: FolderOpen },
+  { path: '/certifications', label: 'Certifications', Icon: Award },
   { path: '/contact', label: 'Contact', Icon: Mail },
 ]
 

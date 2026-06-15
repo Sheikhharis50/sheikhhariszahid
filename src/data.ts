@@ -1,3 +1,10 @@
+export interface Certification {
+  title: string
+  issuer: string
+  date?: string
+  url?: string
+}
+
 export interface Skill {
   name: string
   level: number
@@ -46,32 +53,37 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'Python', level: 100, icon: '/assets/svg/about/progress_bars/python.svg' },
       { name: 'Django', level: 100, icon: '/assets/svg/about/progress_bars/django.svg' },
-      { name: 'Node.js', level: 80, icon: '/assets/svg/about/progress_bars/node Js.svg' },
-      { name: 'Redux', level: 100, icon: '/assets/svg/about/progress_bars/redux.svg' },
-      { name: 'Material UI', level: 100, icon: '/assets/svg/about/progress_bars/material_ui.svg' },
-      { name: 'Next.js', level: 60, icon: '/assets/svg/about/progress_bars/javascript.svg' },
-      { name: 'Bootstrap', level: 80, icon: '/assets/svg/about/progress_bars/bootstrap.svg' },
-      { name: 'Gatsby', level: 60, icon: '/assets/svg/about/progress_bars/Gatsby.svg' },
-      { name: 'Express.js', level: 20, icon: '/assets/svg/about/progress_bars/expressjs.svg' },
-      { name: 'Docusaurus', level: 20, icon: '/assets/svg/about/progress_bars/docusaurus.svg' },
-      { name: 'Tailwind CSS', level: 20, icon: '/assets/svg/about/progress_bars/tailwind.svg' },
+      { name: 'Node.js', level: 80, icon: '/assets/svg/about/progress_bars/nodejs.svg' },
+      { name: 'Express.js', level: 60, icon: '/assets/svg/about/progress_bars/expressjs.svg' },
+      { name: 'Flask', level: 60, icon: '/assets/svg/about/progress_bars/flask.svg' },
+      { name: 'FastAPI', level: 40, icon: '/assets/svg/about/progress_bars/fastapi.svg' },
+      { name: 'Celery', level: 80, icon: '/assets/svg/about/progress_bars/clarity.svg' },
+      { name: 'GraphQL', level: 60, icon: '/assets/svg/about/progress_bars/graphql.svg' },
+      { name: 'NumPy', level: 40, icon: '/assets/svg/about/progress_bars/numpy.svg' },
+      { name: 'NestJS', level: 80, icon: '/assets/svg/about/progress_bars/nestjs.svg' },
+      { name: 'TypeORM', level: 80, icon: '/assets/svg/about/progress_bars/typeorm.svg' },
+      { name: 'Prisma', level: 60, icon: '/assets/svg/about/progress_bars/prisma.svg' },
+      { name: 'Pandas', level: 60, icon: '/assets/svg/about/progress_bars/pandas.svg' },
+      { name: 'WebSocket', level: 60, icon: '/assets/svg/about/progress_bars/websocket.svg' },
     ],
   },
   {
     title: 'Front-End & Libraries',
     skills: [
-      { name: 'React', level: 80, icon: '/assets/svg/about/progress_bars/react.svg' },
-      { name: 'Celery', level: 80, icon: '/assets/svg/about/progress_bars/clarity.svg' },
+      { name: 'React', level: 100, icon: '/assets/svg/about/progress_bars/react.svg' },
+      { name: 'Next.js', level: 80, icon: '/assets/svg/about/progress_bars/javascript.svg' },
+      { name: 'TypeScript', level: 80, icon: '/assets/svg/about/progress_bars/typescript.svg' },
+      { name: 'JavaScript', level: 100, icon: '/assets/svg/about/progress_bars/javascript.svg' },
+      { name: 'Redux', level: 100, icon: '/assets/svg/about/progress_bars/redux.svg' },
+      { name: 'Tailwind CSS', level: 80, icon: '/assets/svg/about/progress_bars/tailwind.svg' },
+      { name: 'Material UI', level: 100, icon: '/assets/svg/about/progress_bars/material_ui.svg' },
+      { name: 'Bootstrap', level: 80, icon: '/assets/svg/about/progress_bars/bootstrap.svg' },
       { name: 'Sass', level: 60, icon: '/assets/svg/about/progress_bars/sass.svg' },
-      { name: 'JavaScript', level: 60, icon: '/assets/svg/about/progress_bars/javascript.svg' },
-      { name: 'LogStash', level: 60, icon: '/assets/svg/about/progress_bars/logstash.svg' },
-      { name: 'Flask', level: 60, icon: '/assets/svg/about/progress_bars/flask.svg' },
+      { name: 'Gatsby', level: 60, icon: '/assets/svg/about/progress_bars/Gatsby.svg' },
       { name: 'Ajax', level: 40, icon: '/assets/svg/about/progress_bars/ajax.svg' },
-      { name: 'NumPy', level: 40, icon: '/assets/svg/about/progress_bars/numpy.svg' },
-      { name: 'GraphQL', level: 40, icon: '/assets/svg/about/progress_bars/graphql.svg' },
-      { name: 'TypeScript', level: 40, icon: '/assets/svg/about/progress_bars/typescript.svg' },
-      { name: 'jQuery', level: 20, icon: '/assets/svg/about/progress_bars/jquery.svg' },
-      { name: 'FastAPI', level: 20, icon: '/assets/svg/about/progress_bars/fastapi.svg' },
+      { name: 'jQuery', level: 40, icon: '/assets/svg/about/progress_bars/jquery.svg' },
+      { name: 'LogStash', level: 60, icon: '/assets/svg/about/progress_bars/logstash.svg' },
+      { name: 'Docusaurus', level: 40, icon: '/assets/svg/about/progress_bars/docusaurus.svg' },
     ],
   },
   {
@@ -277,3 +289,5 @@ export const trustedBy = [
   { name: 'Pashione', logo: '/assets/images/home/pashione.png' },
   { name: 'Degree37', logo: '/assets/images/home/degree37.png' },
 ]
+
+export const certifications: Certification[] = []
