@@ -65,12 +65,12 @@ export default function Projects() {
                   <span className="inline-block ml-2 text-xl opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
                 </a>
 
-                <h4 className="text-red-400 text-sm font-bold mb-2 uppercase tracking-wider">Description</h4>
+                <h4 className="text-amber-400 text-sm font-bold mb-2 uppercase tracking-wider">Description</h4>
                 <p className="text-zinc-300 text-sm md:text-base font-medium mb-5 leading-relaxed">
                   {project.description}
                 </p>
 
-                <h4 className="text-red-400 text-sm font-bold mb-3 uppercase tracking-wider">Tech Stack</h4>
+                <h4 className="text-amber-400 text-sm font-bold mb-3 uppercase tracking-wider">Tech Stack</h4>
                 <motion.div
                   className="flex flex-wrap gap-2 mb-6"
                   initial="hidden"
@@ -94,7 +94,7 @@ export default function Projects() {
                 </motion.div>
 
                 <div>
-                  <h4 className="text-red-400 text-sm font-bold mb-1 uppercase tracking-wider">Domain</h4>
+                  <h4 className="text-amber-400 text-sm font-bold mb-1 uppercase tracking-wider">Domain</h4>
                   <p className="text-zinc-300 font-medium">{project.domain}</p>
                 </div>
               </div>

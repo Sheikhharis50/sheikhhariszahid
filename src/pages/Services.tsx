@@ -1,6 +1,16 @@
 import { useState, useRef, type MouseEvent } from 'react'
 import { motion } from 'framer-motion'
+import { Smartphone, Server, Globe, Monitor, Lightbulb, Layers } from 'lucide-react'
 import { services } from '../data'
+
+const serviceIcons: Record<string, React.ReactNode> = {
+  'Mobile Development': <Smartphone size={40} className="text-white mb-3" />,
+  'Back-end Development': <Server size={40} className="text-white mb-3" />,
+  'Web Development': <Globe size={40} className="text-white mb-3" />,
+  'Front-end Development': <Monitor size={40} className="text-white mb-3" />,
+  'Consultancy': <Lightbulb size={40} className="text-white mb-3" />,
+  'Full Stack Development': <Layers size={40} className="text-white mb-3" />,
+}
 
 const expectList = [
   {
@@ -58,6 +68,12 @@ function TiltCard({ children }: { children: React.ReactNode }) {
   )
 }
 
+const sectionHeadingStyle = {
+  background: 'linear-gradient(135deg, #f59e0b, #fbbf24)',
+  WebkitBackgroundClip: 'text' as const,
+  WebkitTextFillColor: 'transparent' as const,
+}
+
 export default function Services() {
   return (
     <div className="p-6 md:p-8">
@@ -85,14 +101,7 @@ export default function Services() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <h2
-            className="text-lg font-semibold mb-4"
-            style={{
-              background: 'linear-gradient(135deg, #b91c1c, #ef4444)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
+          <h2 className="text-lg font-semibold mb-4" style={sectionHeadingStyle}>
             What you can expect:
           </h2>
           <ul className="space-y-3">
@@ -111,14 +120,7 @@ export default function Services() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.25 }}
         >
-          <h2
-            className="text-lg font-semibold mb-4"
-            style={{
-              background: 'linear-gradient(135deg, #b91c1c, #ef4444)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
+          <h2 className="text-lg font-semibold mb-4" style={sectionHeadingStyle}>
             My Expertise
           </h2>
           <p className="text-zinc-300 text-sm leading-relaxed mb-6">
@@ -126,14 +128,7 @@ export default function Services() {
             functional and user-friendly. My approach ensures that your products are shippable and
             deliverable, addressing both design and technical challenges effectively.
           </p>
-          <h2
-            className="text-lg font-semibold mb-4"
-            style={{
-              background: 'linear-gradient(135deg, #b91c1c, #ef4444)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-            }}
-          >
+          <h2 className="text-lg font-semibold mb-4" style={sectionHeadingStyle}>
             Applications I'm Fluent In
           </h2>
           <ul className="space-y-3 text-zinc-300 text-sm">
@@ -179,15 +174,10 @@ export default function Services() {
               {/* Header */}
               <div
                 className="p-6"
-                style={{ background: 'linear-gradient(135deg, #bddceb, #06b6d4, #6366f1)' }}
+                style={{ background: 'linear-gradient(135deg, #1e1b4b, #312e81, #4338ca)' }}
               >
-                <img
-                  src={svc.icon}
-                  alt=""
-                  className="w-14 mb-3 -ml-2"
-                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-                />
-                <h3 className="text-xl font-bold text-black">{svc.title}</h3>
+                {serviceIcons[svc.title] ?? null}
+                <h3 className="text-xl font-bold text-white">{svc.title}</h3>
               </div>
               {/* Body */}
               <div className="p-6 bg-white flex-1 flex flex-col">
@@ -196,7 +186,7 @@ export default function Services() {
                 <ul className="space-y-1">
                   {svc.offerings.map((o) => (
                     <li key={o} className="text-gray-600 text-sm font-medium flex gap-2 items-start">
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-400 shrink-0" />
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0" />
                       {o}
                     </li>
                   ))}

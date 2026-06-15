@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion'
+import { MoveRight } from 'lucide-react'
 import { stats, trustedBy } from '../data'
 
 // ---------- Animated counter ----------
@@ -66,7 +67,7 @@ export default function Home() {
             style={{
               width: 'calc(100% + 16px)',
               height: 'calc(100% + 16px)',
-              background: 'conic-gradient(from 0deg, #06b6d4, #6366f1, #f339f3, #06b6d4)',
+              background: 'conic-gradient(from 0deg, #06b6d4, #6366f1, #a78bfa, #06b6d4)',
               filter: 'blur(2px)',
             }}
           />
@@ -76,7 +77,7 @@ export default function Home() {
             style={{
               width: 'calc(100% + 8px)',
               height: 'calc(100% + 8px)',
-              background: 'conic-gradient(from 180deg, #f339f3, #06b6d4, #6366f1, #f339f3)',
+              background: 'conic-gradient(from 180deg, #a78bfa, #06b6d4, #6366f1, #a78bfa)',
               filter: 'blur(1px)',
             }}
           />
@@ -122,7 +123,14 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 + i * 0.15 }}
             >
-              <div className="text-3xl lg:text-4xl font-extrabold text-red-500">
+              <div
+                className="text-3xl lg:text-4xl font-extrabold"
+                style={{
+                  background: 'linear-gradient(135deg, #f59e0b, #fbbf24)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
                 <Counter value={stat.value} suffix={stat.suffix} />
               </div>
               <p className="mt-1.5 text-zinc-300 text-sm lg:text-base font-medium">{stat.label}</p>
@@ -139,7 +147,7 @@ export default function Home() {
         transition={{ duration: 0.7, delay: 1 }}
       >
         <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white flex items-center justify-center gap-3 h-14">
-          <img src="/assets/svg/home/arrow.svg" alt="" className="w-5 sm:w-7 inline" />
+          <MoveRight className="w-5 sm:w-7 text-amber-400 shrink-0" />
           <Typewriter text="Senior Software Engineer" />
         </h2>
 

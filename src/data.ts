@@ -22,7 +22,6 @@ export interface Service {
   title: string
   description: string
   offerings: string[]
-  icon: string
 }
 
 export interface Project {
@@ -166,7 +165,6 @@ export const services: Service[] = [
       'App Testing and Quality Assurance',
       'Native App Development (Swift, Kotlin)',
     ],
-    icon: '/assets/svg/services/block.svg',
   },
   {
     title: 'Back-end Development',
@@ -178,7 +176,6 @@ export const services: Service[] = [
       'Authentication and Authorisation',
       'API Development and Integration',
     ],
-    icon: '/assets/svg/services/block.svg',
   },
   {
     title: 'Web Development',
@@ -190,7 +187,6 @@ export const services: Service[] = [
       'Website Maintenance and Support',
       'E-commerce Solutions',
     ],
-    icon: '/assets/svg/services/peramid.svg',
   },
   {
     title: 'Front-end Development',
@@ -202,7 +198,6 @@ export const services: Service[] = [
       'Cross-Browser Compatibility',
       'Front-end Optimisation',
     ],
-    icon: '/assets/svg/services/certificate.svg',
   },
   {
     title: 'Consultancy',
@@ -214,7 +209,6 @@ export const services: Service[] = [
       'Performance Optimisation',
       'Code Reviews and Audits',
     ],
-    icon: '/assets/svg/services/peramid.svg',
   },
   {
     title: 'Full Stack Development',
@@ -226,7 +220,6 @@ export const services: Service[] = [
       'Database Design and Management',
       'Cloud Services (AWS, Azure)',
     ],
-    icon: '/assets/svg/services/certificate.svg',
   },
 ]
 

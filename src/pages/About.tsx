@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { MoveRight } from 'lucide-react'
 import { skillCategories, experiences } from '../data'
 
 const fadeUp = {
@@ -36,10 +37,10 @@ function SkillBar({ name, level, icon, index }: { name: string; level: number; i
             style={{
               background:
                 level >= 80
-                  ? 'linear-gradient(90deg, #b91c1c, #ef4444)'
+                  ? 'linear-gradient(90deg, #06b6d4, #6366f1)'
                   : level >= 60
-                  ? 'linear-gradient(90deg, #9333ea, #ef4444)'
-                  : 'linear-gradient(90deg, #6366f1, #9333ea)',
+                  ? 'linear-gradient(90deg, #6366f1, #a78bfa)'
+                  : 'linear-gradient(90deg, #a78bfa, #c4b5fd)',
             }}
             initial={{ width: 0 }}
             whileInView={{ width: `${level}%` }}
@@ -65,14 +66,14 @@ export default function About() {
         >
           <h2 className="text-white text-2xl md:text-4xl font-bold">I'm Specialized in</h2>
           <h3
-            className="mt-2 text-2xl md:text-4xl font-bold font-mono"
+            className="mt-2 text-2xl md:text-4xl font-bold font-mono flex items-center gap-2"
             style={{
               background: 'linear-gradient(135deg, #06b6d4, #6366f1)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}
           >
-            <img src="/assets/svg/about/arrow.svg" alt="" className="w-5 inline mr-2" />
+            <MoveRight className="w-5 shrink-0" style={{ color: '#06b6d4' }} />
             Modern Frameworks_
           </h3>
         </motion.div>
@@ -80,7 +81,7 @@ export default function About() {
         <div className="mt-10 grid md:grid-cols-2 gap-x-16 gap-y-10">
           {skillCategories.map((cat) => (
             <div key={cat.title}>
-              <h4 className="text-white text-lg font-semibold border-l-2 border-yellow-400 pl-3 mb-5">
+              <h4 className="text-white text-lg font-semibold border-l-2 border-amber-400 pl-3 mb-5">
                 {cat.title}
               </h4>
               <motion.div
@@ -133,7 +134,7 @@ export default function About() {
                   <li key={j} className="text-zinc-300 text-sm flex gap-2">
                     <span
                       className="mt-1.5 w-1.5 h-1.5 rounded-full shrink-0"
-                      style={{ background: 'linear-gradient(135deg, #29b1f5, #4c4ef0)' }}
+                      style={{ background: 'linear-gradient(135deg, #06b6d4, #6366f1)' }}
                     />
                     <span dangerouslySetInnerHTML={{ __html: a.replace(/(\d+%?)/g, '<b class="gradient-text-blue">$1</b>') }} />
                   </li>
