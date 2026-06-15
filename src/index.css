@@ -22,18 +22,18 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #06b6d4, #6366f1);
+    background: linear-gradient(to bottom, #06b6d4, #a78bfa);
     border-radius: 99px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #0ea5e9, #818cf8);
+    background: linear-gradient(to bottom, #0ea5e9, #c4b5fd);
   }
 }
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(135deg, #06b6d4, #6366f1, #f339f3);
+    background: linear-gradient(135deg, #06b6d4, #6366f1, #a78bfa);
     background-size: 300% 300%;
     -webkit-background-clip: text;
     background-clip: text;
@@ -51,14 +51,14 @@
   .gradient-border {
     background:
       linear-gradient(#18181b, #18181b) padding-box,
-      linear-gradient(135deg, #06b6d4, #6366f1, #f339f3) border-box;
+      linear-gradient(135deg, #06b6d4, #6366f1, #a78bfa) border-box;
     border: 1px solid transparent;
   }
 
-  .gradient-border-red {
+  .gradient-border-amber {
     background:
       linear-gradient(#18181b, #18181b) padding-box,
-      linear-gradient(135deg, #b91c1c, #ef4444) border-box;
+      linear-gradient(135deg, #f59e0b, #fbbf24) border-box;
     border: 1px solid transparent;
   }
 
@@ -76,7 +76,8 @@
            md:flex hidden invisible translate-x-4 opacity-0
            transition-all duration-200
            group-hover:visible group-hover:translate-x-0 group-hover:opacity-100
-           bg-red-500 whitespace-nowrap;
+           whitespace-nowrap;
+    background: linear-gradient(135deg, #312e81, #4338ca);
   }
 
   .nav-item {

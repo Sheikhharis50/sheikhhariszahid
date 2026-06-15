@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import { motion } from 'framer-motion'
+import { Phone, Mail } from 'lucide-react'
 
 const countries = [
   'None', 'Pakistan', 'New Zealand', 'England', 'America', 'Afghanistan',
@@ -32,13 +33,19 @@ export default function Contact() {
   }
 
   const inputClass =
-    'w-full bg-zinc-900/80 text-zinc-200 placeholder-zinc-500 border-b border-red-600/60 py-3 px-4 focus:outline-none focus:border-red-400 transition-colors duration-200'
+    'w-full bg-zinc-900/80 text-zinc-200 placeholder-zinc-500 border-b border-indigo-500/60 py-3 px-4 focus:outline-none focus:border-indigo-400 transition-colors duration-200'
 
   const field = (key: keyof FormState) => ({
     value: form[key],
     onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
       setForm((f) => ({ ...f, [key]: e.target.value })),
   })
+
+  const socialLinks = [
+    { href: 'mailto:Itshariszahid@gmail.com', icon: null, IconComponent: Mail, label: 'Email' },
+    { href: 'https://www.linkedin.com/in/sheikh-haris-zahid/', icon: '/assets/svg/contact/linkdin.svg', IconComponent: null, label: 'LinkedIn' },
+    { href: 'https://github.com/Sheikhharis50', icon: '/assets/svg/contact/github.svg', IconComponent: null, label: 'GitHub' },
+  ]
 
   return (
     <div className="p-5 md:p-8">
@@ -79,21 +86,17 @@ export default function Contact() {
 
           {/* Phone */}
           <a href="tel:+923104150111" className="flex items-center gap-3 text-zinc-200 hover:text-white transition-colors mb-4 group">
-            <img src="/assets/svg/contact/phone.svg" alt="" className="w-5 shrink-0" />
+            <Phone size={18} className="shrink-0 text-indigo-400" />
             <span className="text-sm">
               Phone:{' '}
-              <span className="group-hover:text-blue-400 transition-colors">+92 310 4150111</span>
+              <span className="group-hover:text-cyan-400 transition-colors">+92 310 4150111</span>
             </span>
           </a>
 
           {/* Social */}
           <div className="flex items-center gap-2 mt-2">
             <span className="text-zinc-300 text-sm font-medium">Social:</span>
-            {[
-              { href: 'mailto:Itshariszahid@gmail.com', icon: '/assets/svg/contact/email.svg', label: 'Email' },
-              { href: 'https://www.linkedin.com/in/sheikh-haris-zahid/', icon: '/assets/svg/contact/linkdin.svg', label: 'LinkedIn' },
-              { href: 'https://github.com/Sheikhharis50', icon: '/assets/svg/contact/github.svg', label: 'GitHub' },
-            ].map((s) => (
+            {socialLinks.map((s) => (
               <motion.a
                 key={s.label}
                 href={s.href}
@@ -102,8 +105,12 @@ export default function Contact() {
                 className="p-2 rounded-full bg-zinc-800 hover:bg-indigo-600/30 transition-colors"
                 whileHover={{ scale: 1.15 }}
                 whileTap={{ scale: 0.95 }}
+                aria-label={s.label}
               >
-                <img src={s.icon} alt={s.label} className="w-5 h-5" />
+                {s.IconComponent
+                  ? <s.IconComponent size={18} className="text-zinc-300" />
+                  : <img src={s.icon!} alt={s.label} className="w-[18px] h-[18px]" />
+                }
               </motion.a>
             ))}
           </div>

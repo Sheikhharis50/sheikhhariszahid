@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { Home, User, Briefcase, FolderOpen, Mail } from 'lucide-react'
 
 const navItems = [
-  { path: '/home', label: 'Home', icon: '/assets/svg/nav/home.svg' },
-  { path: '/about', label: 'About', icon: '/assets/svg/nav/about.svg' },
-  { path: '/services', label: 'Services', icon: '/assets/svg/nav/services.svg' },
-  { path: '/projects', label: 'Projects', icon: '/assets/svg/nav/projects.svg' },
-  { path: '/contact', label: 'Contact', icon: '/assets/svg/nav/email.svg' },
+  { path: '/home', label: 'Home', Icon: Home },
+  { path: '/about', label: 'About', Icon: User },
+  { path: '/services', label: 'Services', Icon: Briefcase },
+  { path: '/projects', label: 'Projects', Icon: FolderOpen },
+  { path: '/contact', label: 'Contact', Icon: Mail },
 ]
 
 export default function Navbar() {
@@ -37,7 +38,7 @@ export default function Navbar() {
                 className="absolute inset-0"
                 animate={
                   isActive
-                    ? { background: 'linear-gradient(135deg, #b91c1c, #ef4444)' }
+                    ? { background: 'linear-gradient(135deg, #312e81, #4338ca)' }
                     : isHovered
                     ? { background: 'linear-gradient(135deg, #1e1b4b, #312e81)' }
                     : { background: 'linear-gradient(135deg, #18181b, #27272a)' }
@@ -49,10 +50,11 @@ export default function Navbar() {
               <span className="absolute top-0 right-0 hidden md:block h-full w-0.5 bg-white/20 opacity-0 transition-opacity group-hover:opacity-100" />
 
               {/* Icon */}
-              <img
-                src={item.icon}
-                alt={item.label}
-                className="relative z-10 w-5 h-5"
+              <item.Icon
+                size={20}
+                className={`relative z-10 transition-colors duration-200 ${
+                  isActive ? 'text-violet-300' : 'text-zinc-400 group-hover:text-white'
+                }`}
               />
             </li>
           )
