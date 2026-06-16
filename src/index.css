@@ -9,14 +9,8 @@
   }
 
   body {
-    @apply bg-black text-white;
+    @apply bg-black text-white overflow-hidden;
     font-family: 'Inter', system-ui, sans-serif;
-  }
-
-  @media (min-width: 768px) {
-    body {
-      overflow: hidden;
-    }
   }
 
   ::-webkit-scrollbar {
@@ -75,7 +69,7 @@
   }
 
   .section-scroll {
-    @apply bg-gradient-to-bl from-zinc-900 to-zinc-800 flex-1 overflow-y-auto;
+    @apply bg-gradient-to-bl from-zinc-900 to-zinc-800 flex-1 overflow-y-scroll;
   }
 
   .nav-tooltip {

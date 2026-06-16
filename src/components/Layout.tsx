@@ -1,4 +1,5 @@
 import { type ReactNode, useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom'
 import Navbar from './Navbar'
 import ParticleBg from './ParticleBg'
 
@@ -7,12 +8,13 @@ interface LayoutProps {
 }
 
 export default function Layout({ children }: LayoutProps) {
+  const { pathname } = useLocation()
   return (
-    <div className="relative bg-black md:h-screen md:overflow-hidden">
+    <div className="relative bg-black h-screen">
       <ParticleBg />
       <CursorGlow />
-      <div className="relative z-10 md:h-full flex flex-col md:flex-row">
-        <div className="flex-1 section-scroll">
+      <div className="relative z-10 h-full flex flex-col md:flex-row">
+        <div key={pathname} className="flex-1 section-scroll">
           <div className="section-content-inner">{children}</div>
         </div>
         <Navbar />
