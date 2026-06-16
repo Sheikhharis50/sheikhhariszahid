@@ -18,7 +18,7 @@ export default function Navbar() {
   const [hoveredPath, setHoveredPath] = useState<string | null>(null)
 
   return (
-    <nav className="md:w-[72px] w-full md:relative fixed bottom-0 z-50 flex-shrink-0">
+    <nav className="md:w-[72px] w-full md:relative fixed bottom-0 z-50 flex-shrink-0 mobile-nav-safe">
       <ul className="flex md:flex-col justify-center md:justify-start h-16 md:h-full list-none">
         {navItems.map((item) => {
           const isActive = location.pathname === item.path

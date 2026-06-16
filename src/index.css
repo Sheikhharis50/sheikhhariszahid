@@ -9,8 +9,14 @@
   }
 
   body {
-    @apply bg-black text-white overflow-hidden;
+    @apply bg-black text-white;
     font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      overflow: hidden;
+    }
   }
 
   ::-webkit-scrollbar {
@@ -89,6 +95,30 @@
 
   .skill-bar-container {
     @apply relative h-2 bg-zinc-700 rounded-full overflow-hidden;
+  }
+
+  /* Inner wrapper padding so iOS Safari respects bottom clearance behind fixed nav */
+  .section-content-inner {
+    padding-bottom: 6rem; /* 64px = h-16 nav height */
+  }
+
+  @supports (padding-bottom: env(safe-area-inset-bottom)) {
+    .section-content-inner {
+      padding-bottom: calc(6rem + env(safe-area-inset-bottom));
+    }
+  }
+
+  @media (min-width: 768px) {
+    .section-content-inner {
+      padding-bottom: 0;
+    }
+  }
+
+  /* Nav extends background into safe area; items stay above home indicator */
+  @media (max-width: 767px) {
+    .mobile-nav-safe {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
   }
 }
 

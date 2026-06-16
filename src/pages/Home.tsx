@@ -5,15 +5,18 @@ import Background from "../components/Background";
 import Typewriter from "../components/Typewriter";
 import Counter from "../components/Counter";
 
+
 // ---------- Page ----------
 export default function Home() {
+  const isDesktop = window.matchMedia('(min-width: 768px)').matches
+  
   return (
     <div className="min-h-full relative">
-      {/* Background */}
-      <Background />
+      {/* Background — skipped on mobile to avoid Three.js/WebGL cost */}
+      {isDesktop && <Background />}
 
       {/* Dark overlay */}
-      {/* <div className="fixed inset-0 bg-zinc-900/60 z-[2]" /> */}
+      <div className="fixed inset-0 bg-zinc-900/60 z-[2]" />
 
       {/* Page content above background */}
       <div className="relative z-10 flex flex-col">
@@ -119,7 +122,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1 }}
         >
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white flex items-center justify-center gap-3 h-14">
+          <h2 className="text-lg sm:text-4xl lg:text-5xl font-bold text-white flex items-center justify-center gap-3 h-14">
             <MoveRight className="w-5 sm:w-7 text-amber-400 shrink-0" />
             <Typewriter text="Full-Stack AI Developer" />
           </h2>

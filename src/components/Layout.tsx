@@ -8,11 +8,13 @@ interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="relative bg-black h-screen overflow-hidden">
+    <div className="relative bg-black md:h-screen md:overflow-hidden">
       <ParticleBg />
       <CursorGlow />
-      <div className="relative z-10 h-full flex flex-col md:flex-row">
-        <div className="flex-1 section-scroll pb-16 md:pb-0">{children}</div>
+      <div className="relative z-10 md:h-full flex flex-col md:flex-row">
+        <div className="flex-1 section-scroll">
+          <div className="section-content-inner">{children}</div>
+        </div>
         <Navbar />
       </div>
     </div>
